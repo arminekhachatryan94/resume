@@ -1,3 +1,9 @@
+#armine {
+    font-family: cursive;
+    font-size: 20px;
+    font-style: oblique;
+}
+
 .bg-white {
     background-color: white;
 }
@@ -8,4 +14,8 @@
 
 .float-right {
     float: right;
+}
+
+.padding {
+    padding: 3px;
 }
