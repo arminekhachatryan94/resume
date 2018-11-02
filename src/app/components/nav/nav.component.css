@@ -5,3 +5,7 @@
 .text-royalblue {
     color: royalblue;
 }
+
+.float-right {
+    float: right;
+}
