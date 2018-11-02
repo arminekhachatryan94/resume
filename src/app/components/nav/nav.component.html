@@ -2,17 +2,14 @@
   <nav class="navbar fixed-top bg-white">
     <div class="container-fluid">
       <ul class="nav text-royalblue">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Active</a>
+        <li id="home" class="nav-item">
+          <a class="nav-link" (mouseover)="onMouseOver('home')" on-mouseleave="onMouseLeave('home')">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li id="resume" class="nav-item">
+          <a class="nav-link" (mouseover)="onMouseOver('resume')" on-mouseleave="onMouseLeave('resume')">Resume</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+        <li id="blog" class="nav-item">
+          <a class="nav-link" (mouseover)="onMouseOver('blog')" on-mouseleave="onMouseLeave('blog')">Blog</a>
         </li>
       </ul>            
     </div>
