@@ -7,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  color: string
+
   constructor() { }
 
   ngOnInit() {
+    this.color = 'rgb(196, 201, 216)';
   }
 
   onMouseOver(name) {
     console.log(name);
     console.log(document.getElementById(name).style);
-    document.getElementById(name).style.backgroundColor = 'rgb(196, 201, 216)';
+    document.getElementById(name).style.backgroundColor = this.color;
   }
 
   onMouseLeave(name) {
