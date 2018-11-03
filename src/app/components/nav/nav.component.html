@@ -1,20 +1,21 @@
-<nav class="container-fluid fixed-top bg-white">
+<nav class="fixed-top bg-white">
+  <div id="bar">
   <ul class="nav text-royalblue navbar-custom float-left">
     <li id="armine" class="nav-item">
       <a class="nav-link" (mouseover)="onMouseOver('armine')" (mouseleave)="onMouseLeave('armine')">Armine Khachatryan</a>
     </li>
   </ul>
-  
   <ul class="nav text-royalblue navbar-custom float-right">
-    <li id="icon" class="nav-item padding">
-      <a class="nav-link" (click)="hamburgerBar()">
-        <div id="bar1"></div>
-        <div id="bar2"></div>
-        <div id="bar3"></div>
-      </a>
-    </li>
-  </ul>
-  
+      <li id="icon" class="nav-item padding">
+        <a class="nav-link" (click)="hamburgerBar()">
+          <div id="bar1"></div>
+          <div id="bar2"></div>
+          <div id="bar3"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
   <ul id="hamburger" class="nav text-royalblue navbar-custom float-right">
     <li id="resume" class="nav-item padding">
       <a class="nav-link" (mouseover)="onMouseOver('resume')" (mouseleave)="onMouseLeave('resume')">Resume</a>

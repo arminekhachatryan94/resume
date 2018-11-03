@@ -34,8 +34,13 @@
 }
 
 @media screen and (max-width: 800px) {
+    #hamburger {
+        width: 100%;
+    }
+
     #icon {
         display: block;
+        float: right;
     }
     
     #armine {
@@ -46,22 +51,23 @@
         display: none;
     }
 
-    #hamburger a#icon {
-        float: right;
-        display: block;
-    }
-
+    /* responsive */
     #hamburger.responsive {
         position: relative;
     }
 
-    #hamburger.responsive #icon {
+    #bar.responsive #icon {
         position: absolute;
         right: 0;
         top: 0;
+        width: 100%;
     }
+
     #hamburger.responsive li {
         float: none;
         display: block;
+        width: 100%;
+        text-align: left;
+        background-color: lightgrey;
     }
 }
