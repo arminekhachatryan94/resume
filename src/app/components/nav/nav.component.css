@@ -18,6 +18,7 @@
 
 .padding {
     padding: 3px;
+    display: block;
 }
 
 /* hamburger bar */
@@ -41,7 +42,7 @@
         padding-bottom: 1px;
     }
 
-    #hamburger li:not(:first-child) {
+    #hamburger li {
         display: none;
     }
 
@@ -50,7 +51,9 @@
         display: block;
     }
 
-    #hamburger.responsive {position: relative;}
+    #hamburger.responsive {
+        position: relative;
+    }
 
     #hamburger.responsive #icon {
         position: absolute;
@@ -60,6 +63,5 @@
     #hamburger.responsive li {
         float: none;
         display: block;
-        
     }
 }
