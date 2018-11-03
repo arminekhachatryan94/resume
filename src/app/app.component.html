@@ -1,8 +1,15 @@
 <div>
-  <app-nav></app-nav>
-  <div id="bg-royalblue" class="padding-top bg">
-    <div *ngFor="let n of [1, 2, 4, 5, 6, 7, 8, 9, 10]">
-      <div class="display-1">hi</div>
+  <header>
+    <app-nav></app-nav>
+  </header>
+  <main>
+    <div id="bg-royalblue" class="padding-top bg">
+      <div *ngFor="let n of [1, 2, 4, 5, 6, 7, 8, 9, 10]">
+        <div class="display-1">hi</div>
+      </div>
     </div>
-  </div>
+  </main>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>
