@@ -8,8 +8,8 @@
     background-color: white;
 }
 
-.text-royalblue {
-    color: royalblue;
+.text--blue {
+    color: rgb(62, 152, 217);
 }
 
 .float-right {
@@ -21,6 +21,14 @@
     display: block;
 }
 
+li {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
 /* hamburger bar */
 #icon {
     display: none;
@@ -29,7 +37,7 @@
 #bar1, #bar2, #bar3 {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: rgb(62, 152, 217);
     margin: 4px 0;
 }
 
@@ -68,7 +76,7 @@
     }
 
     #hamburger.responsive li:first-child {
-        border-top: 1px solid royalblue;
+        border-top: 1px solid rgb(62, 152, 217);
     }
     
     #hamburger.responsive li {
