@@ -52,8 +52,8 @@
     }
 
     /* responsive */
-    #hamburger.responsive {
-        position: relative;
+    #bar.responsive:not(:first-child){
+        box-shadow: 5px 0px #333333;
     }
 
     #bar.responsive #icon {
@@ -63,11 +63,19 @@
         width: 100%;
     }
 
+    #hamburger.responsive {
+        position: relative;
+    }
+
+    #hamburger.responsive li:first-child {
+        border-top: 1px solid royalblue;
+    }
+    
     #hamburger.responsive li {
         float: none;
         display: block;
         width: 100%;
         text-align: left;
-        background-color: lightgrey;
+        background-color: white;
     }
 }
