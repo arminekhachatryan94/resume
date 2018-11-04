@@ -2,15 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+/* components */
 import { NavComponent } from './components/nav/nav.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+
+/* views */
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 import { routingModule } from './app.routing';
-import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
+    SidebarComponent,
     PortfolioComponent
   ],
   imports: [
