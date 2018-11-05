@@ -13,6 +13,19 @@ img {
 .text--grey {
     color: grey;
 }
+
+.fa {
+    font-size: 25px;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons a {
+    padding: 5px;
+}
+
 .row {
     padding: 0px;
 }
