@@ -1,12 +1,11 @@
-<div [ngClass]="{'row': !md_size, 'col': md_size }"
-  onresize="resize()">
+<div [ngClass]="{'row': !md_size, 'col': md_size }" onresize="resize()">
   <!-- mobile -->
-  <div *ngIf="md_size" class="row-md-4">
+  <div *ngIf="md_size" class="row-md-8">
     <app-sidebar [md_size]="md_size">
     </app-sidebar>
   </div>
   <div *ngIf="md_size" class="row-md-8">
-    <div class="bg-danger text-center">
+    <div class="text-center">
       Portfolio works!
     </div>
   </div>
@@ -17,7 +16,7 @@
     </app-sidebar>
   </div>
   <div *ngIf="!md_size" class="col-md-8">
-    <div class="bg-danger text-center">
+    <div class="text-center">
       Portfolio works!
     </div>
   </div>

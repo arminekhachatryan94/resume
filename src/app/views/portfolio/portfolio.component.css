@@ -1,6 +1,4 @@
-.col-md-8 {
+.col {
     padding: 0px;
-}
-.col-md-4 {
-    padding: 0px;
+    margin: 0px;
 }

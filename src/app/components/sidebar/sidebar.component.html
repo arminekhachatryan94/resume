@@ -2,21 +2,21 @@
   <div class="container-fluid">
     <div *ngIf="md_size" class="row text-center bg-warning">
       <!-- mobile -->
-      <div class="col-md-4 bg-primary">
+      <div class="col-4 col-md-4 bg-primary">
         pic
       </div>
-      <div class="col-md-8 bg-success">
+      <div class="col-8 col-md-8 bg-success">
         text
       </div>
     </div>
     <div *ngIf="!md_size" class="text-center">
-        <!-- desktop -->
-        <div>
-          pic
-        </div>
-        <div>
-          text
-        </div>
+      <!-- desktop -->
+      <div class="row-12">
+        pic
       </div>
+      <div class="row-12">
+        text
+      </div>
+    </div>
   </div>
 </div>
