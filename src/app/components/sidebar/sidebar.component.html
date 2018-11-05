@@ -1,3 +1,22 @@
 <div class="bg-white">
-  sidebar
+  <div class="container-fluid">
+    <div *ngIf="md_size" class="row text-center bg-warning">
+      <!-- mobile -->
+      <div class="col-md-4 bg-primary">
+        pic
+      </div>
+      <div class="col-md-8 bg-success">
+        text
+      </div>
+    </div>
+    <div *ngIf="!md_size" class="text-center">
+        <!-- desktop -->
+        <div>
+          pic
+        </div>
+        <div>
+          text
+        </div>
+      </div>
+  </div>
 </div>
