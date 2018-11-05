@@ -1,20 +1,10 @@
 <div class="bg-white">
   <div class="container-fluid">
-    <div *ngIf="md_size" class="row text-center bg-warning">
-      <!-- mobile -->
-      <div class="col-4 col-md-4 bg-primary">
+    <div [ngClass]="{'row': md_size}" class="text-center">
+      <div [ngClass]="{'col-4 col-md-4': md_size, 'row-12': !md_size}">
         pic
       </div>
-      <div class="col-8 col-md-8 bg-success">
-        text
-      </div>
-    </div>
-    <div *ngIf="!md_size" class="text-center">
-      <!-- desktop -->
-      <div class="row-12">
-        pic
-      </div>
-      <div class="row-12">
+      <div [ngClass]="{'col-8 col-md-8': md_size, 'row-12': !md_size}">
         text
       </div>
     </div>
