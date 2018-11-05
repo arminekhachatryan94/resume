@@ -1,7 +1,30 @@
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.text--grey {
+    color: grey;
+}
 .row {
     padding: 0px;
 }
 
 .inline {
     display: inline;
+}
+
+.img {
+    padding: 10px;
+}
+
+.sections {
+    padding: 10px;
 }

@@ -1,11 +1,27 @@
 <div class="bg-white">
   <div class="container-fluid">
     <div [ngClass]="{'row': md_size}" class="text-center">
-      <div [ngClass]="{'col-4 col-md-4': md_size, 'row-12': !md_size}">
-        pic
+      <div [ngClass]="{'col-4 col-md-4': md_size, 'row-12': !md_size}"
+        class="img">
+        <img src="assets/images/default.png" alt="image">
       </div>
-      <div [ngClass]="{'col-8 col-md-8': md_size, 'row-12': !md_size}">
-        text
+      <div [ngClass]="{'col-8 col-md-8': md_size, 'row-12': !md_size}"
+        class="sections">
+        <div class="text--grey">
+          <a>About</a>
+        </div>
+        <div class="text--grey">
+          <a>Experience</a>
+        </div>
+        <div class="text--grey">
+          <a>Education</a>
+        </div>
+        <div class="text--grey">
+          <a>Projects</a>
+        </div>
+        <div class="text--grey">
+          <a>Skills</a>
+        </div>
       </div>
     </div>
   </div>

@@ -9,9 +9,18 @@ export class PortfolioComponent implements OnInit {
   md_size: boolean;
 
   constructor() {
-    if( window.innerWidth < 768 ){
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    
+    if( width/height < .8 ){
+      // landscape: width > height
       this.md_size = true;
+    }
+    else if( width/height > 1.5 ){
+      // vertical: width < height
+      this.md_size = false;
     } else {
+      // square: width ~= height
       this.md_size = false;
     }
   }
@@ -20,9 +29,18 @@ export class PortfolioComponent implements OnInit {
   }
 
   @HostListener('window:resize') resize() {
-    if( window.innerWidth < 768 ){
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
+    if( width/height < .8 ){
+      // landscape: width > height
       this.md_size = true;
+    }
+    else if( width/height > 1.5 ){
+      // vertical: width < height
+      this.md_size = false;
     } else {
+      // square: width ~= height
       this.md_size = false;
     }
   }

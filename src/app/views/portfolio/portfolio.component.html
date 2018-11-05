@@ -1,9 +1,9 @@
-<div [ngClass]="{'row': !md_size, 'col': md_size }" onresize="resize()">
+<div [ngClass]="{'row': !md_size, 'col': md_size}" onresize="resize()">
   <div [ngClass]="{'row-md-8': md_size, 'col-md-4': !md_size}">
-    <app-sidebar [md_size]="md_size">
+    <app-sidebar [md_size]="md_size" [ngClass]="{'w--100': md_size}" class="position--fixed">
     </app-sidebar>
   </div>
-  <div [ngClass]="{'row-md-8': md_size, 'col-md-8': !md_size}">
+  <div [ngClass]="{'row-md-8': md_size, 'padding--top': md_size, 'col-md-8': !md_size}">
     <div class="text-center">
       Portfolio works!
     </div>
