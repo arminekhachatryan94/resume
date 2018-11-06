@@ -7,17 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   md_size: boolean;
-  // skills: [
-  //   [ 'PHP', 'Laravel', 'Lumen' ],
-  //   [ 'Javascript', 'jQuery', 'Vue.js', 'Vuex',
-  //     'Express.js', 'Node.js', 'Angular4', 'Socket.io' ],
-  //   [ 'MySQL', 'MongoDB' ],
-  //   [ 'Java', 'Jswing', 'JavaFX' ],
-  //   [ 'C++', 'C' ],
-  //   [ 'PHPUnit', 'JUnit' ],
-  //   [ 'Bootstrap', 'CSS', 'HTML' ],
-  //   [ 'Agile', 'Scrum', 'Git', 'Github', 'Jira' ]
-  // ]
+  skills: Object;
 
   constructor() {
     let width = window.innerWidth;
@@ -37,6 +27,7 @@ export class PortfolioComponent implements OnInit {
   }
   
   ngOnInit() {
+    this.setSkills();
   }
 
   @HostListener('window:resize') resize() {
@@ -54,5 +45,20 @@ export class PortfolioComponent implements OnInit {
       // square: width ~= height
       this.md_size = false;
     }
+  }
+
+  setSkills() {
+    this.skills = [
+      'PHP', 'Laravel', 'Lumen',
+      'Javascript', 'jQuery', 'Vue.js', 'Vuex',
+      'Express.js', 'Node.js', 'Angular4', 'Socket.io',
+      'MySQL', 'MongoDB',
+      'Java', 'Jswing', 'JavaFX',
+      'C++', 'C',
+      'PHPUnit', 'JUnit',
+      'Bootstrap', 'CSS', 'HTML',
+      'Agile', 'Scrum', 'Git', 'Github', 'Jira',
+      'Unit Testing', 'Automated Testing'
+    ]; 
   }
 }
