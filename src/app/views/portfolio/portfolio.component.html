@@ -1,11 +1,37 @@
-<div [ngClass]="{'row': !md_size, 'col': md_size}" onresize="resize()">
-  <div [ngClass]="{'row-md-8': md_size, 'col-md-4': !md_size}">
+<div [ngClass]="{'row col-12': !md_size, 'col': md_size}">
+  <div [ngClass]="{'row-8': md_size, 'col-lg-3 col-md-3 col-sm-3 col-xs-3': !md_size}">
     <app-sidebar [md_size]="md_size" [ngClass]="{'w--100': md_size}" class="position--fixed">
     </app-sidebar>
   </div>
-  <div [ngClass]="{'row-md-8': md_size, 'padding--top': md_size, 'col-md-8': !md_size}">
+  <div [ngClass]="{'row-8 padding--top': md_size, 'col-lg-9 col-md-9 col-sm-9 col-xs-9': !md_size}" class="bg-danger">
+    <div class="container-fluid bg-primary">
     <div class="text-center">
-      Portfolio works!
+      <section id="about">
+        <div>About</div>
+        <div class="rectangle"></div>
+      </section>
+      <section id="experience">
+        <div>Experience</div>
+        <div class="rectangle">
+        </div>
+      </section>
+      <section id="education">
+        <div>Education</div>
+        <div class="rectangle"></div>
+      </section>
+      <section id="projects">
+        <div>Projects</div>
+        <div class="rectangle"></div>
+      </section>
+      <section id="skills">
+        <div>Skills</div>
+        <div class="rectangle"></div>
+      </section>
+      <section id="contact">
+        <div>Contact</div>
+        <div class="rectangle"></div>
+      </section>
+    </div>
     </div>
   </div>
 </div>

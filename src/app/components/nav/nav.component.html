@@ -18,13 +18,13 @@
 
   <ul id="hamburger" class="nav text--blue navbar-custom float-right">
     <li id="resume" class="nav-item padding">
-      <a [routerLink]="['portfolio']" class="nav-link" (mouseover)="onMouseOver('resume')" (mouseleave)="onMouseLeave('resume')">Portfolio</a>
+      <div [routerLink]="['portfolio']" class="nav-link" (click)="hamburgerBar()" (mouseover)="onMouseOver('resume')" (mouseleave)="onMouseLeave('resume')">Portfolio</div>
     </li>
     <li id="blog" class="nav-item padding">
-      <a class="nav-link" (mouseover)="onMouseOver('blog')" (mouseleave)="onMouseLeave('blog')">Blog</a>
+      <div class="nav-link" (mouseover)="onMouseOver('blog')" (click)="hamburger()" (mouseleave)="onMouseLeave('blog')">Blog</div>
     </li>
     <li id="about" class="nav-item padding">
-      <a class="nav-link" (mouseover)="onMouseOver('about')" (mouseleave)="onMouseLeave('about')">About</a>
+      <div class="nav-link" (mouseover)="onMouseOver('about')" (click)="hamburger()" (mouseleave)="onMouseLeave('about')">About</div>
     </li>
   </ul>
 </nav>
