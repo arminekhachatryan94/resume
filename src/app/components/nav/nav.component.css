@@ -39,6 +39,7 @@ a {
     height: 3px;
     background-color: rgb(62, 152, 217);
     margin: 4px 0;
+    transition: all 1s ease;
 }
 
 @media screen and (max-width: 800px) {

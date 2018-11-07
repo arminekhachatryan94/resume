@@ -1,9 +1,9 @@
-<div [ngClass]="{'row col-12': !md_size, 'col': md_size}">
-  <div [ngClass]="{'row-8': md_size, 'col-lg-3 col-md-3 col-sm-3 col-xs-3': !md_size}">
+<div [ngClass]="{'row': !md_size, 'col': md_size}">
+  <div [ngClass]="{'row-8': md_size, 'col-12 col-sm-4 col-md-3 col-lg-2': !md_size}">
     <app-sidebar [md_size]="md_size" [ngClass]="{'w--100': md_size}" class="position--fixed">
     </app-sidebar>
   </div>
-  <div [ngClass]="{'row-8 padding--top': md_size, 'col-lg-9 col-md-9 col-sm-9 col-xs-9': !md_size}" class="bg-danger">
+  <div [ngClass]="{'row-8 padding--top': md_size, 'col-12 col-sm-8 col-md-9 col-lg-10': !md_size}" class="bg-danger">
     <div class="container-fluid bg-primary">
     <div class="text-center">
       <section id="about">

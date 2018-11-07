@@ -1,5 +1,6 @@
 #skills {
     background-color: white;
+    padding: 10px;
 }
 
 #skills--content {
@@ -16,17 +17,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.col {
-    padding: 0px;
-    margin: 0px;
-}
-
-.position--fixed {
-    position: fixed;
-    display: block;
-    left: 0px;
-}
-
 .w--100 {
     width: 100%;
 }
@@ -38,4 +28,12 @@
 .rectangle {
     width: 100%;
     background-color: white;
+}
+
+@include media-breakpoint-up(sm) {
+    .position--fixed {
+        position: fixed;
+        display: block;
+        left: 0px;    
+    }
 }
