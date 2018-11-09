@@ -1,29 +1,60 @@
-<div [ngClass]="{'row': !md_size, 'col': md_size}">
-  <div [ngClass]="{'row-8': md_size, 'col-12 col-sm-4 col-md-3 col-lg-2': !md_size}">
-    <app-sidebar [md_size]="md_size" [ngClass]="{'w--100': md_size}" class="position--fixed">
-    </app-sidebar>
-  </div>
-  <div [ngClass]="{'row-8 padding--top': md_size, 'col-12 col-sm-8 col-md-9 col-lg-10': !md_size}" class="bg-danger">
-    <div class="container-fluid bg-primary">
+  <div>
     <div class="text-center">
-      <section id="about">
+      <section id="about" class="container-fluid">
         <div>About</div>
-        <div class="rectangle">
-        </div>
+        <div id="about--content" class="container text-left"></div>
       </section>
+      <div id="experience-bg" class="bg--section text--black">
+        <div class="display-1">EXPERIENCE</div>
+      </div>
       <section id="experience">
         <div>Experience</div>
-        <div class="rectangle"></div>
+        <div id="experience--content" class="container text-left">
+          <div *ngFor="let experience of experiences">
+          </div>
+        </div>
       </section>
-      <section id="education">
+      <div id="education-bg" class="bg--section text--black">
+        <div class="display-1">EDUCATION</div>
+      </div>
+      <section id="education" class="container-fluid">
         <div>Education</div>
-        <div class="rectangle"></div>
+        <div id="education--content" class="container text-left">
+          <div *ngFor="let education of educations" class="education">
+            <div class="row">
+              <div class="col-8 col-xs-12">{{ education.school }}</div>
+              <div class="text-right col-4 col-xs-12"><i>{{ education.start_date }} - {{ education.end_date }}</i></div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                {{education.degree}} in {{education.major}}
+              </div>
+              <div class="col-4 text-right">
+                <span>GPA: </span>
+                {{education.gpa}}</div>
+            </div>
+            <div>
+              <span *ngIf="education.honors.length != 0">Honors:</span>
+              {{education.honors}}
+            </div>
+            <div>
+              <div><u>Relevant courses:</u></div>
+              <div *ngFor="let course of education.coursework; let i = index" class="course">
+                <span *ngIf="i != education.coursework.length-1">{{course}},</span>
+                <span *ngIf="i == education.coursework.length-1">{{course}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id="projects">
+      <section id="projects" class="container-fluid">
         <div>Projects</div>
-        <div class="rectangle"></div>
+        <div id="projects--content" class="container text-left"></div>
       </section>
-      <section id="skills">
+      <div id="skills-bg" class="bg--section text--black">
+        <div class="display-1">SKILLS</div>
+      </div>  
+      <section id="skills" class="container-fluid bg-skills col-8 bg-space">
         <div>Skills</div>
         <div id="skills--content" class="container text-left">
           <ul class="row">
@@ -31,11 +62,11 @@
           </ul>
         </div>
       </section>
-      <section id="contact">
-        <div>Contact</div>
-        <div class="rectangle"></div>
-      </section>
-    </div>
+      <div id="contact-bg" class="bg--section text--black">
+        Contact
+        <div class="contact">
+          Text
+        </div>
+      </div>
     </div>
   </div>
-</div>

@@ -45,9 +45,7 @@ img {
 }
 
 @include media-breakpoint-down(md) { 
-
     .default {
-        background: red;
         width: 150px;
         height: 150px;
     }
