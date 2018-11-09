@@ -7,8 +7,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   md_size: boolean;
-  experiences: Object[];
-  educations: Object[];
+  experience: Object[];
+  education: Object[];
   skills: Object;
 
   constructor() {
@@ -66,7 +66,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   setEducations() {
-    this.educations = [
+    this.education = [
       {
         school: 'California State University, Northridge',
         degree: 'Master of Science',
@@ -116,7 +116,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   setExperiences() {
-    this.experiences = [
+    this.experience = [
       {
         start_date: 'Sept 2016',
         end_date: 'Dec 2017',
