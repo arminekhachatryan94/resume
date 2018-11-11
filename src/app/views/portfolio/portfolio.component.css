@@ -1,9 +1,11 @@
 #experience-bg {
     background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
+    background-position: 75% 25%;
 }
 
 #education-bg {
     background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('http://images6.fanpop.com/image/photos/40600000/tumblr-static-djptrlstifwwk40so0cg4sk80-1024-booknerd-40616610-1024-682.jpg');
+    background-position: 10% 90%;
 }
 
 #skills-bg {
@@ -49,8 +51,8 @@
 }
 
 .vertical--align {
-    height: 300px;
-    line-height: 300px;
+    height: 350px;
+    line-height: 350px;
 }
 
 .vertical--align-child {
@@ -83,3 +85,4 @@
 .default {
     border-radius: 50%;
 }
+
