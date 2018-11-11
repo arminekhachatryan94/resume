@@ -1,13 +1,9 @@
-section {
-    border-radius: 10px;
-}
-
 #experience-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('https://cdn.spacetelescope.org/archives/images/wallpaper2/heic1509a.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
 }
 
 #education-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url('https://images.unsplash.com/photo-1511804472014-fa7b871cd6a9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc0b35984144aefaedf449d7651661c1&w=1000&q=80');
+    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('http://images6.fanpop.com/image/photos/40600000/tumblr-static-djptrlstifwwk40so0cg4sk80-1024-booknerd-40616610-1024-682.jpg');
 }
 
 #skills-bg {
@@ -15,14 +11,31 @@ section {
 }
 
 #contact-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('https://i.amz.mshcdn.com/FsW0n6mY7nYe07wCqo3tNyo67cs=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F264025%2FGettyImages-172828100.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url();
+}
+
+#about {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#skills--content {
+    white-space: pre-wrap;
+    word-break: keep-all; /*this stops the word breaking*/
+}
+
+#skills--content li {
+    display: inline;
+    margin: 5px;
+    padding: 3px;
+    background-color: lightgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact {
     background-color: white;
     display: block;
     margin: 100px;
-    padding: 50px;
+    padding: 10px;
 }
 
 .text--black {
@@ -33,11 +46,14 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.vertical--align {
     height: 300px;
     line-height: 300px;
 }
 
-.bg--section div {
+.vertical--align-child {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -52,15 +68,18 @@ section {
     margin-right: 5px;
 }
 
-#skills--content {
-    white-space: pre-wrap;
-    word-break: keep-all; /*this stops the word breaking*/
+.border1 {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 20px;
 }
 
-#skills--content li {
-    display: inline;
+.border2 {
+    border: 2px solid black;
+    padding: 5px;
     margin: 5px;
-    padding: 3px;
-    background-color: lightgray;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.default {
+    border-radius: 50%;
 }
