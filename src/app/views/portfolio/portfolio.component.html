@@ -30,9 +30,12 @@
                 <div class="text-right col-4 col-xs-12"><i>{{ exp.start_date }} - {{ exp.end_date }}</i></div>
               </div>
               <div>{{ exp.company }}</div>
-              <div>{{ exp.description.intro }}</div>
-              <div *ngFor="let summary of exp.description.summary">
-                {{ summary }}
+              <div *ngFor="let project of exp.projects">
+                <div *ngIf="project.name.length" class="work--project-name">Project: {{ project.name }}</div>
+                <div class="work--project-summary">{{ project.summary }}</div>
+                <ul *ngFor="let description of project.description">
+                  <li>{{ description }}</li>
+                </ul>
               </div>
             </div>
             </div>

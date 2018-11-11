@@ -86,3 +86,11 @@
     border-radius: 50%;
 }
 
+/* experience */
+.work--project-summary {
+    font-style: italic;
+}
+
+.work--project-name {
+    font-weight: bold;
+}
