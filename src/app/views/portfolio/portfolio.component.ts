@@ -18,6 +18,16 @@ export class PortfolioComponent implements OnInit {
     this.setProjects();
   }
 
+  navigate(location) {
+    if( location == 'github' ){
+      window.location.href = 'https://github.com/arminekhachatryan94/';
+    } else if( location == 'linkedin' ){
+      window.location.href = 'https://www.linkedin.com/in/armine-khachatryan-982216120/';
+    } else if( location == 'email' ){
+      window.location.href = 'mailto:arminekhachatryan417@gmail.com';
+    }
+  }
+
   setSkills() {
     this.skills = [
       'PHP', 'Laravel', 'Lumen',
