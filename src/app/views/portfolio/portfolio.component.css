@@ -1,3 +1,15 @@
+#experience {
+    padding: 50px;
+}
+
+#experience li {
+    margin: 2px;
+}
+
+#education {
+    padding: 50px;
+}
+
 #experience-bg {
     background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
     background-position: 75% 25%;
@@ -22,7 +34,7 @@
 
 #skills--content {
     white-space: pre-wrap;
-    word-break: keep-all; /*this stops the word breaking*/
+    word-break: keep-all;
 }
 
 #skills--content li {
@@ -93,4 +105,14 @@
 
 .work--project-name {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@include media-breakpoint-down(md) {
+    #experience .col-12 {
+        text-align: left;
+    }
 }
