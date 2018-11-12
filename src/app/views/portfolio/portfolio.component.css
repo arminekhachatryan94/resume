@@ -112,7 +112,13 @@
 }
 
 @include media-breakpoint-down(md) {
-    #experience .col-12 {
+    #experience .text-pos {
         text-align: left;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #experience .text-pos {
+        text-align: right;
     }
 }

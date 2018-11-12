@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,6 +15,7 @@ export class PortfolioComponent implements OnInit {
     this.setExperiences()
     this.setEducations();
     this.setSkills();
+    this.setProjects();
   }
 
   setSkills() {
@@ -80,18 +81,6 @@ export class PortfolioComponent implements OnInit {
         ]
       }
     ]
-  }
-
-  setProjects() {
-    this.projects = [
-      {
-        name: 'Meddit',
-        summary: '',
-        technologies: ['Laravel', 'Vue.js', 'MySQL', 'PHPUnit'],
-        url: '',
-        github: ''
-      }
-    ];
   }
 
   setExperiences() {
@@ -171,5 +160,22 @@ export class PortfolioComponent implements OnInit {
         ]
       }
     ]
+  }
+
+  setProjects() {
+    this.projects = [
+      {
+        name: 'Meddit',
+        description: [
+          'Full stack forum similar to Reddit\'s UI design.',
+          'Authentication and Authorization.',
+          'SPA using Vue Router.',
+          'Unit and Automated Tests, and currently applying Selenium testing.'
+        ],
+        technologies: ['Laravel', 'Vue.js', 'MySQL', 'PHPUnit'],
+        url: '',
+        github: 'https://github.com/arminekhachatryan94/meddit'
+      }
+    ];
   }
 }

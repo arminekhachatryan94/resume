@@ -1,15 +1,15 @@
-#armine {
-    font-family: cursive;
-    font-size: 20px;
-    font-style: oblique;
+nav {
+    border-bottom: 2px solid rgb(221, 221, 221);
+    background-color: rgb(250, 250, 250);
 }
 
-.bg-white {
-    background-color: white;
+#armine {
+    font-family: Georgia, serif;
+    font-size: 20px;
 }
 
 .text--blue {
-    color: rgb(62, 152, 217);
+    color: gray;
 }
 
 .float-right {
@@ -37,7 +37,7 @@ a {
 #bar1, #bar2, #bar3 {
     width: 25px;
     height: 3px;
-    background-color: rgb(62, 152, 217);
+    background-color: rgb(160, 160, 160);
     margin: 4px 0;
     transition: all 1s ease;
 }
@@ -77,7 +77,7 @@ a {
     }
 
     #hamburger.responsive li:first-child {
-        border-top: 1px solid rgb(62, 152, 217);
+        border-top: 2px solid rgb(221, 221, 221);
     }
     
     #hamburger.responsive li {
@@ -85,6 +85,6 @@ a {
         display: block;
         width: 100%;
         text-align: left;
-        background-color: white;
+        background-color: rgb(250, 250, 250);
     }
 }

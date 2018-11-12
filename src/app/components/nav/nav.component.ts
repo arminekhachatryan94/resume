@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.color = 'rgb(226, 243, 255)';
+    this.color = 'rgb(221, 221, 221)';
   }
 
   onMouseOver(name) {
