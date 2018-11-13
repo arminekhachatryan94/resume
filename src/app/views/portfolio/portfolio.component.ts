@@ -121,7 +121,7 @@ export class PortfolioComponent implements OnInit {
         projects: [
           {
             name: 'ICS Microservice',
-            summary: 'A microservice that creates an ICS file based on a student\'s or professor\'s class schedule.',
+            summary: 'A microservice that creates an ICS file based on a student\'s or professor\'s class schedule',
             description: [
               'Utilized repository pattern to ensure the abstraction of infrastructure and domain',
               'Leveraged test-driven development to establish a project guideline',
@@ -139,13 +139,13 @@ export class PortfolioComponent implements OnInit {
         projects: [
           {
             name: '',
-            summary: 'Provides students with the necessary resources to achieve academic success.',
+            summary: 'Provides students with the necessary resources to achieve academic success',
             description: [
               `Help students understand, study, and apply mathematical concepts; research and
               upload articles, tutorials, and practice worksheets with solutions onto the CSUN:
               SMART Lab’s Canvas page to help students better enhance their mathematical skills
               and knowledge to succeed in their class.`,
-              'Tutored algebra, business calculus, and calculus I.'
+              'Tutored algebra, business calculus, and calculus I'
             ]
           }
         ]
@@ -163,8 +163,8 @@ export class PortfolioComponent implements OnInit {
               `Help students understand mathematical concepts and how to succeed in class;
               attended and participated in tutor trainings to improve tutoring techniques,
               peer mentoring techniques, learning strategies, lesson planning, working with
-              groups, public speaking, and techniques for working with students with disabilities.`,
-              'Tutored pre-algebra, algebra, trigonometry, business calculus, and calculus I.'
+              groups, public speaking, and techniques for working with students with disabilities`,
+              'Tutored pre-algebra, algebra, trigonometry, business calculus, and calculus I'
             ]
           }
         ]
@@ -177,14 +177,78 @@ export class PortfolioComponent implements OnInit {
       {
         name: 'Meddit',
         description: [
-          'Full stack forum similar to Reddit\'s UI design.',
-          'Authentication and Authorization.',
-          'SPA using Vue Router.',
-          'Unit and Automated Tests, and currently applying Selenium testing.'
+          'Full stack forum similar to Reddit\'s UI design',
+          'Authentication, Authorization, user roles, and comments on comments functionality',
+          'SPA using Vue Router',
+          'Unit and Automated Tests, and currently applying Selenium testing'
         ],
-        technologies: ['Laravel', 'Vue.js', 'MySQL', 'PHPUnit'],
-        url: '',
-        github: 'https://github.com/arminekhachatryan94/meddit'
+        technologies: 'Laravel, Vue.js, MySQL, PHPUnit',
+        url: 'https://github.com/arminekhachatryan94/meddit'
+      },
+      {
+        name: 'Calculator',
+        description: [
+          ''
+        ],
+        technologies: '',
+        url: 'https://github.com/arminekhachatryan94/calculator'
+      },
+      {
+        name: 'Umbrella Irrigation',
+        description: [
+          'Front-end software developer, but also worked on the back-end, from a software and hardware team of six, who developed this local and online irrigation control system for CSUN',
+          'System is responsible for managing valves by turning them on/off, getting data, assigning/adjusting schedules based on weather conditions, water usage predictions, and past water usage retrospectives',
+          'User management is responsible for assigning user privileges and assigning users to valves',
+          'Communicates with a Raspberry Pi to send schedules, which depends on fields in MySQL tables',
+          'Development process: conducted sprint planning, iteration reviews, and sprint retrospectives'
+        ],
+        technologies: 'Laravel, Vue, MySQL, Bootstrap, Fancytree, Axios, Jira, Git',
+        url: 'http://irrigation.sandbox.csun.edu',
+      },
+      {
+        name: 'iChat',
+        description: [
+          'Real-time chat built with the MEVN stack (MongoDB, Express.js, Vue.js, Node.js), Axios, and Socket.io',
+          'SPA; authentication and authorization'
+        ],
+        technologies: 'MongoDB, Express.js, Vue.js, Node.js), Axios, Socket.io',
+        url: 'https://github.com/arminekhachatryan94/mevnchat'
+      },
+      {
+        name: 'Voice Rehabilitation',
+        description: [
+          'Speech therapy application for those with articulation disorders that allows them to record their voice, displays a real-time graph that plots and analyzes the voice input against formant frequencies, and provides feedback for improving accuracy of English vowels',
+          'Developed during a weekend hackathon (CSUN Accessibility Competition of 2018) sponsored by Northrop Grumman and California Communications Access Foundation',
+          'Our team of five (plus one mentor) placed first out of six teams and had the opportunity to attend the 33rd Annual CSUN Assistive Technology Conference'
+        ],
+        technologies: 'Android Studio, MPAndroidChart, and vowel-recognizer',
+        url: 'https://github.com/arminekhachatryan94/VoiceRehabilitation'
+      },
+      {
+        name: 'Blog Project',
+        description: [
+          'Full stack blog web application',
+          'MVC and SPA that uses foreign keys, ORM, authentication, authorization, unit testing (Jasmine and Karma for Angular 2, and PHPUnit for Laravel), CRUD, and SOLID principles'
+        ],
+        technologies: 'Laravel, Angular 2, MySQL, Jasmine, Karma, and PHPUnit',
+        url: 'https://github.com/arminekhachatryan94/blog_project'
+      },
+      {
+        name: 'Blackjack',
+        description: [
+          'Real-time networked blackjack where only 2 or 3 users are allowed to connect and play at a time'
+        ],
+        technologies: 'Socket.io, jQuery, Node.js, and Bootstrap',
+        url: 'https://github.com/arminekhachatryan94/web_dev/tree/master/Lab4'
+      },
+      {
+        name: 'Tsarbucks',
+        description: [
+          'E-commerce coffee system',
+          'Authentication and authorization, as users are allowed to login as a customer or a barista. Customers are allowed to view their previous orders, their cart, and the menu page, add items to their cart, and submit new orders. Baristas are able to view the orders pending page and complete orders'
+        ],
+        technologies: 'LAMP stack, ran with MAMP',
+        url: 'https://github.com/arminekhachatryan94/web_dev/tree/master/Lab3'
       }
     ];
   }
