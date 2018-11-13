@@ -48,7 +48,7 @@
       <div id="education-bg" class="container-fluid bg--section vertical--align text--black">
         <div class="display-4 vertical--align-child">EDUCATION</div>
       </div>
-      <section id="education" class="container-fluid">
+      <section id="education">
         <div id="education--content" class="container text-left">
           <div *ngFor="let edu of education" class="education">
             <div class="row">
@@ -81,7 +81,20 @@
         <div class="display-4 vertical--align-child">PROJECTS</div>
       </div>
       <section id="projects" class="container-fluid">
-        <div id="projects--content" class="container text-left"></div>
+        <div id="projects--content" class="container text-left">
+          <div *ngFor="let project of projects" class="projects">
+            <div class="row">
+              <div class="h3">{{ project.name }}</div>
+              <button class="btn btn-sm view-btn" (click)="projectLink(project.url)">View</button>
+            </div>
+            <div class="italic">Technologies: {{ project.technologies }}</div>
+            <ul>
+              <li *ngFor="let description of project.description">
+                {{ description }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <div id="skills-bg" class="container-fluid bg--section vertical--align text--black">
         <div class="display-4 vertical--align-child">SKILLS</div>

@@ -28,6 +28,10 @@ export class PortfolioComponent implements OnInit {
     }
   }
 
+  projectLink(link) {
+    window.location.href = link;
+  }
+
   setSkills() {
     this.skills = [
       'PHP', 'Laravel', 'Lumen',
@@ -188,9 +192,9 @@ export class PortfolioComponent implements OnInit {
       {
         name: 'Calculator',
         description: [
-          ''
+          'Calculator desktop application with unit tests'
         ],
-        technologies: '',
+        technologies: 'Java, JSwing, JUnit',
         url: 'https://github.com/arminekhachatryan94/calculator'
       },
       {
