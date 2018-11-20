@@ -1,3 +1,8 @@
+img {
+    max-width: 300px;
+    width: inherit;
+}
+
 #experience {
     padding: 50px;
 }
@@ -63,7 +68,7 @@
 }
 
 .vertical--align {
-    height: 350px;
+    height: auto;
     line-height: 350px;
 }
 
@@ -142,14 +147,46 @@
     background-color: rgb(240, 240, 240);
 }
 
-@include media-breakpoint-down(md) {
+.about--text {
+    text-align: left;
+}
+
+@media (max-width: 992px) {
     #experience .text-pos {
         text-align: left;
     }
+
+    .img--align {
+        text-align: center;
+    }
+
+    .about--text {
+        text-align: center;
+    }
+
+    .vertical--align {
+        height: auto;
+        line-height: 300px;
+    }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 992px) {
     #experience .text-pos {
         text-align: right;
     }
+
+    .img--align {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .about-btns button {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.foo {
+    background: red;
 }
