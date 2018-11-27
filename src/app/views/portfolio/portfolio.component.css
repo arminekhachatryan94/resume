@@ -15,6 +15,10 @@ img {
     padding: 50px;
 }
 
+#projects {
+    padding: 50px;
+}
+
 #experience-bg {
     background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
     background-position: 75% 25%;
@@ -25,12 +29,18 @@ img {
     background-position: 10% 90%;
 }
 
+#projects-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, .2)), url('https://s3.amazonaws.com/s3.imagefinder.co/uploads/2016/01/23135240/boss-fight-free-high-quality-stock-images-photos-photography-computer-programming-code-notebook-computer-macbook-cup-coffee-960x640.jpg');
+    background-position: 10% 90%;
+}
+
 #skills-bg {
     background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('https://ak2.picdn.net/shutterstock/videos/12845822/thumb/1.jpg');
 }
 
-#contact-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url();
+#skills {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #about {
@@ -50,13 +60,6 @@ img {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contact {
-    background-color: white;
-    display: block;
-    margin: 100px;
-    padding: 10px;
-}
-
 .text--black {
     color: black;
 }
@@ -65,11 +68,24 @@ img {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.vertical--align-about {
+    height: auto;
+    line-height: 220px;
+}
+
+.vertical--align-about-child {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
 }
 
 .vertical--align {
     height: auto;
-    line-height: 350px;
+    line-height: normal;
 }
 
 .vertical--align-child {
@@ -174,7 +190,7 @@ img {
 
     .vertical--align {
         height: auto;
-        line-height: 300px;
+        line-height: normal;
     }
 }
 
@@ -213,8 +229,20 @@ img {
     }
 }
 
+@media (min-width: 768px) {
+    section#about {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     section#about {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .about--text {
         padding-top: 20px;
     }
 }
