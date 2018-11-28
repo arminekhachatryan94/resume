@@ -31,7 +31,7 @@ img {
 
 #projects-bg {
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, .2)), url('https://s3.amazonaws.com/s3.imagefinder.co/uploads/2016/01/23135240/boss-fight-free-high-quality-stock-images-photos-photography-computer-programming-code-notebook-computer-macbook-cup-coffee-960x640.jpg');
-    background-position: 10% 90%;
+    background-position: 75% 25%;
 }
 
 #skills-bg {
@@ -180,6 +180,10 @@ img {
         text-align: left;
     }
 
+    #education .text-pos {
+        text-align: left;
+    }
+
     .img--align {
         text-align: center;
     }
@@ -196,6 +200,10 @@ img {
 
 @media (min-width: 992px) {
     #experience .text-pos {
+        text-align: right;
+    }
+
+    #education .text-pos {
         text-align: right;
     }
 

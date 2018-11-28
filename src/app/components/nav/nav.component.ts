@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  color: string;
+  hover_color: string;
   click_color: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.color = 'rgb(240, 240, 240)';
+    this.hover_color = 'rgb(240, 240, 240)';
     this.click_color = 'rgb(221, 221, 221)';
     let path = window.location.pathname;
     if(path == '/') {
@@ -55,7 +55,7 @@ export class NavComponent implements OnInit {
     } else if(path == '/blog' && name == 'blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
     } else {
-      document.getElementById(name).style.backgroundColor = this.color;
+      document.getElementById(name).style.backgroundColor = this.hover_color;
     }
   }
 

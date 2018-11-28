@@ -1,0 +1,19 @@
+.bg--light-gray {
+    background-color: rgb(240, 240, 240);
+}
+.tool:not(:first-child) {
+    padding-left: 10px;
+}
+.footer-padding {
+    padding: 20px;
+}
+.copyright {
+    padding-top: 20px;
+}
+.font {
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+.text--gray {
+    color: gray;
+}

@@ -8,12 +8,14 @@ import { NavComponent } from './components/nav/nav.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 import { routingModule } from './app.routing';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

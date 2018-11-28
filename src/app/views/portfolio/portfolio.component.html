@@ -12,8 +12,7 @@
                   Welcome to my website!
                   My name is Armine Khachatryan, and
                   I am a full-time graduate student studying software engineering at California State University, Northridge.
-                  I currently work at META+Lab as a back-end developer.
-                  This website was created using Angular 6 and Bootstrap 4.0.
+                  I currently work at META+Lab as a software developer.
                   I enjoy traveling, drawing, and photography. Check out some of my drawings <a href="#">here</a>.
                 </div>
                 <div class="about-btns text-center sm-buttons">
@@ -60,15 +59,12 @@
           <div *ngFor="let edu of education" class="education">
             <div class="row">
               <div class="h3 col-8 col-xs-12">{{ edu.school }}</div>
-              <div class="text-right col-4 col-xs-12"><i>{{ edu.start_date }} - {{ edu.end_date }}</i></div>
+              <div class="col-12 col-md-4 text-pos"><i>{{ edu.start_date }} - {{ edu.end_date }}</i></div>
             </div>
             <div class="row">
               <div class="col-8">
                 {{edu.degree}} in {{edu.major}}
               </div>
-              <div class="col-4 text-right">
-                <span>GPA: </span>
-                {{edu.gpa}}</div>
             </div>
             <div *ngIf="edu.honors.length != 0">
               <span class="italic">Honors:</span>
