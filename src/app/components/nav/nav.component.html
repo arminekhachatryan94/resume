@@ -21,7 +21,7 @@
       <div [routerLink]="['']" class="nav-link" (click)="onClick('Portfolio')" (mouseover)="onMouseOver('portfolio')" (mouseleave)="onMouseLeave('portfolio')">Portfolio</div>
     </li>
     <li id="blog" class="nav-item padding">
-      <div class="nav-link" (mouseover)="onMouseOver('blog')" (click)="onClick('Blog')" (mouseleave)="onMouseLeave('blog')">Blog</div>
+      <div [routerLink]="['blog']" class="nav-link" (mouseover)="onMouseOver('blog')" (click)="onClick('Blog')" (mouseleave)="onMouseLeave('blog')">Blog</div>
     </li>
   </ul>
 </nav>

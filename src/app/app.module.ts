@@ -9,13 +9,15 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 import { routingModule } from './app.routing';
 import { FooterComponent } from './components/footer/footer.component';
+import { BlogComponent } from './views/blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     PortfolioComponent,
-    FooterComponent
+    FooterComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

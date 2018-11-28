@@ -1,5 +1,8 @@
 .bg--light-gray {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(250, 250, 250);
+}
+.border--top {
+    border-top: 2px solid rgb(221, 221, 221);
 }
 .tool:not(:first-child) {
     padding-left: 10px;
