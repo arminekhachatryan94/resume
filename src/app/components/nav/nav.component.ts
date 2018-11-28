@@ -15,6 +15,22 @@ export class NavComponent implements OnInit {
     this.color = 'rgb(240, 240, 240)';
   }
 
+  onClick() {
+    var hamburger = document.getElementById("hamburger");
+    if ( hamburger.className.includes('responsive') ) {
+      var bar1 = document.getElementById("bar1");
+      var bar2 = document.getElementById("bar2");
+      var bar3 = document.getElementById("bar3");
+      let index = hamburger.className.indexOf('responsive');
+      hamburger.className = hamburger.className.substr(0, index-1) + hamburger.className.substr(index+10, hamburger.className.length);
+      bar1.style.webkitTransform = "";
+      bar1.style.transform = "";
+      bar2.style.opacity = "";
+      bar3.style.webkitTransform = "";
+      bar3.style.transform = "";
+    }
+  }
+
   onMouseOver(name) {
     document.getElementById(name).style.backgroundColor = this.color;
   }

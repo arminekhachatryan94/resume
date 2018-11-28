@@ -36,9 +36,9 @@ export class PortfolioComponent implements OnInit {
     this.skills = [
       'PHP', 'Laravel', 'Lumen',
       'Javascript', 'jQuery', 'Vue.js', 'Vuex',
-      'Express.js', 'Node.js', 'Angular4', 'Socket.io',
-      'MySQL', 'MongoDB',
-      'Java', 'Jswing', 'JavaFX',
+      'Express.js', 'Node.js', 'Angular4/6', 'Socket.io',
+      'MySQL', 'MongoDB', 'Cassandra',
+      'Java', 'Spring Boot', 'Jswing', 'JavaFX',
       'C++', 'C',
       'PHPUnit', 'JUnit',
       'Bootstrap', 'CSS', 'HTML',
@@ -107,11 +107,12 @@ export class PortfolioComponent implements OnInit {
         projects: [
           {
             name: '10Letters',
-            summary: 'A web application for helps transform individuals through goal-setting, self-evaluation/personal accountability, and mentorship.',
+            summary: 'A web application that helps transform individuals through goal-setting, self-evaluation/personal accountability, and mentorship.',
             description: [
               'Refactored and improved query efficiency with eager loading',
               'Styled new pages', 'Created middleware',
-              'refactored a function to an API and used Axios to get the data',
+              'Refactored a function to an API and used Axios to get the data',
+              'Currently using Vue Croppa to crop and upload profile images',
               'Technolgies: Laravel, Vue.js, MySQL, SASS'
             ],
           }
@@ -179,6 +180,14 @@ export class PortfolioComponent implements OnInit {
   setProjects() {
     this.projects = [
       {
+        name: 'Coffee Shop',
+        description: [
+          'Basic web application with CRUD for admins to update the menu for customers'
+        ],
+        technologies: 'Spring Boot, Angular 6, Apache Cassandra',
+        url: 'https://github.com/arminekhachatryan94/coffee-shop'
+      },
+      {
         name: 'Meddit',
         description: [
           'Full stack forum similar to Reddit\'s UI design',
@@ -212,10 +221,10 @@ export class PortfolioComponent implements OnInit {
       {
         name: 'iChat',
         description: [
-          'Real-time chat built with the MEVN stack (MongoDB, Express.js, Vue.js, Node.js), Axios, and Socket.io',
-          'SPA; authentication and authorization'
+          'Real-time chat SPA with authentication and authorization',
+          'Users are able to view their conversations page, their conversation with a specific person, and send a new message'
         ],
-        technologies: 'MongoDB, Express.js, Vue.js, Node.js), Axios, Socket.io',
+        technologies: 'MongoDB, Express.js, Vue.js, Node.js, Axios, Socket.io',
         url: 'https://github.com/arminekhachatryan94/mevnchat'
       },
       {
