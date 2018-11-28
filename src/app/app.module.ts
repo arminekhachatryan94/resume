@@ -10,6 +10,7 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { routingModule } from './app.routing';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogComponent } from './views/blog/blog.component';
+import { DrawingsComponent } from './views/drawings/drawings.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BlogComponent } from './views/blog/blog.component';
     NavComponent,
     PortfolioComponent,
     FooterComponent,
-    BlogComponent
+    BlogComponent,
+    DrawingsComponent
   ],
   imports: [
     BrowserModule,

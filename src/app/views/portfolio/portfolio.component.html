@@ -13,7 +13,7 @@
                   My name is Armine Khachatryan, and
                   I am a full-time graduate student studying software engineering at California State University, Northridge.
                   I currently work at META+Lab as a software developer.
-                  I enjoy traveling, drawing, and photography. Check out some of my drawings <a href="#">here</a>.
+                  I enjoy traveling, drawing, and photography. Check out some of my drawings <a [routerLink]="['drawings']" (click)="clickDrawings()">here</a>.
                 </div>
                 <div class="about-btns text-center sm-buttons">
                   <button class="btn" (click)="navigate('github')"><i class="fa fa-github fa-lg"></i> Github</button>

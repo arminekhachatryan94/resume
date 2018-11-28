@@ -28,6 +28,11 @@ export class PortfolioComponent implements OnInit {
     }
   }
 
+  clickDrawings() {
+    let portfolio = document.getElementById('portfolio');
+    portfolio.style.backgroundColor = "";
+  }
+
   projectLink(link) {
     window.location.href = link;
   }
@@ -111,7 +116,7 @@ export class PortfolioComponent implements OnInit {
               'Styled new pages', 'Created middleware',
               'Refactored functions to API and used Axios to get the data',
               'Utilized Vue Croppa to crop and upload profile images',
-              'Technolgies: Laravel, Vue.js, MySQL, SASS, Docker'
+              'Technolgies: Laravel, Vue.js, MySQL, SASS, Docker, Travis CI'
             ],
           }
         ]
