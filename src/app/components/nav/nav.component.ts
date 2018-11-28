@@ -40,9 +40,9 @@ export class NavComponent implements OnInit {
     var items = document.querySelectorAll('#hamburger .nav-item');
     for(let i = 0; i < items.length; i++) {
       if(items[i].firstElementChild.innerHTML == name) {
-        items[i].style.backgroundColor = this.click_color;
+        (<HTMLElement>items[i]).style.backgroundColor = this.click_color;
       } else {
-        items[i].style.backgroundColor = "";
+        (<HTMLElement>items[i]).style.backgroundColor = "";
       }
     }
 
