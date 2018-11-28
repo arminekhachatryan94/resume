@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  color: string
+  color: string;
+  click_color: string;
 
   constructor() { }
 
   ngOnInit() {
     this.color = 'rgb(240, 240, 240)';
+    this.click_color = 'rgb(221, 221, 221)';
+    let path = window.location.pathname;
+    if(path == '/') {
+      document.getElementById('portfolio').style.backgroundColor = this.click_color;
+    } else if(path == '/blog') {
+      document.getElementById('blog').style.backgroundColor = this.click_color;
+    }
   }
 
-  onClick() {
+  onClick(name) {
     var hamburger = document.getElementById("hamburger");
     if ( hamburger.className.includes('responsive') ) {
       var bar1 = document.getElementById("bar1");
@@ -29,14 +37,37 @@ export class NavComponent implements OnInit {
       bar3.style.webkitTransform = "";
       bar3.style.transform = "";
     }
+    var items = document.querySelectorAll('#hamburger .nav-item');
+    for(let i = 0; i < items.length; i++) {
+      if(items[i].firstElementChild.innerHTML == name) {
+        items[i].style.backgroundColor = this.click_color;
+      } else {
+        items[i].style.backgroundColor = "";
+      }
+    }
+
   }
 
   onMouseOver(name) {
-    document.getElementById(name).style.backgroundColor = this.color;
+    let path = window.location.pathname;
+    if(path == '/' && name == 'portfolio') {
+      document.getElementById('portfolio').style.backgroundColor = this.click_color;
+    } else if(path == '/blog' && name == 'blog') {
+      document.getElementById('blog').style.backgroundColor = this.click_color;
+    } else {
+      document.getElementById(name).style.backgroundColor = this.color;
+    }
   }
 
   onMouseLeave(name) {
-    document.getElementById(name).style.backgroundColor = "";
+    let path = window.location.pathname;
+    if(path == '/' && name == 'portfolio') {
+      document.getElementById('portfolio').style.backgroundColor = this.click_color;
+    } else if(path == '/blog' && name == 'blog') {
+      document.getElementById('blog').style.backgroundColor = this.click_color;
+    } else {
+      document.getElementById(name).style.backgroundColor = "";
+    }
   }
 
   hamburgerBar() {

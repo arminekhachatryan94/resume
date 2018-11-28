@@ -103,7 +103,7 @@ export class PortfolioComponent implements OnInit {
         start_date: 'Sept 2018',
         end_date: 'present',
         company: 'META+Lab',
-        position: 'Back-End Developer',
+        position: 'Software Developer',
         projects: [
           {
             name: '10Letters',
@@ -111,7 +111,7 @@ export class PortfolioComponent implements OnInit {
             description: [
               'Refactored and improved query efficiency with eager loading',
               'Styled new pages', 'Created middleware',
-              'Refactored a function to an API and used Axios to get the data',
+              'Refactored functions to API and used Axios to get the data',
               'Currently using Vue Croppa to crop and upload profile images',
               'Technolgies: Laravel, Vue.js, MySQL, SASS'
             ],
