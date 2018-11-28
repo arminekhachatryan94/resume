@@ -1,6 +1,9 @@
 .padding-top {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .height--500 {
     height: 520px;
+}
+.text--gray {
+    color: gray;
 }
