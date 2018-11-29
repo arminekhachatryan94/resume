@@ -55,9 +55,14 @@ img {
 #skills--content li {
     display: inline;
     margin: 5px;
-    padding: 3px;
-    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff0d5;
+    border: 1px solid #fde7bd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -moz-box-shadow:    inset 0 0 5px #fde7bd;
+    -webkit-box-shadow: inset 0 0 5px #fde7bd;
+    box-shadow:         inset 0 0 5px #fde7bd; 
 }
 
 .text--black {

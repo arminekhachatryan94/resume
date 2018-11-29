@@ -58,7 +58,7 @@
         <div id="education--content" class="container text-left">
           <div *ngFor="let edu of education" class="education">
             <div class="row">
-              <div class="h3 col-8 col-xs-12">{{ edu.school }}</div>
+              <div class="h3 col-12 col-sm-8">{{ edu.school }}</div>
               <div class="col-12 col-md-4 text-pos"><i>{{ edu.start_date }} - {{ edu.end_date }}</i></div>
             </div>
             <div class="row">
@@ -92,7 +92,9 @@
           <div *ngFor="let project of projects" class="projects">
             <div class="row">
               <div class="h3">{{ project.name }}</div>
-              <button class="btn btn-sm view-btn" (click)="projectLink(project.url)">View</button>
+              <div>
+                <button class="btn btn-sm view-btn" (click)="projectLink(project.url)">View</button>
+              </div>
             </div>
             <div class="italic">Technologies: {{ project.technologies }}</div>
             <ul>
