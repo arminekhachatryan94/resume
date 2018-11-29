@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -20,6 +20,22 @@ export class NavComponent implements OnInit {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
     } else if(path == '/blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
+    }
+  }
+
+  @HostListener('window:popstate', ['$event'])
+  resetClickedNavElement() {
+    let path = window.location.pathname;
+    if(path == '/') {
+      path = '/portfolio';
+    }
+    var items = document.querySelectorAll('#hamburger .nav-item');
+    for(let i = 0; i < items.length; i++) {
+      if('/' + items[i].firstElementChild.innerHTML.toLowerCase() == path) {
+        (<HTMLElement>items[i]).style.backgroundColor = this.click_color;
+      } else {
+        (<HTMLElement>items[i]).style.backgroundColor = "";
+      }
     }
   }
 
