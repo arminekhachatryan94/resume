@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -60,6 +61,11 @@ export class NavComponent implements OnInit {
       } else {
         (<HTMLElement>items[i]).style.backgroundColor = "";
       }
+    }
+
+    if(name == 'resume') {
+      console.log('resume');
+      window.location.href = 'assets/Armine_Khachatryan_Resume.pdf';
     }
 
   }

@@ -7,7 +7,7 @@ import { DrawingsComponent } from "./views/drawings/drawings.component";
 const routes: Routes = [
     { path: '', component: PortfolioComponent },
     { path: 'blog', component: BlogComponent },
-    { path: 'drawings', component: DrawingsComponent }
+    { path: 'drawings', component: DrawingsComponent },
 ];
 
 export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);
