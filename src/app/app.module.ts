@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import {SlideshowModule} from 'ng-simple-slideshow';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { AppComponent } from './app.component';
 /* components */
@@ -13,6 +13,7 @@ import { BlogComponent } from './views/blog/blog.component';
 import { DrawingsComponent } from './views/drawings/drawings.component';
 
 import { routingModule } from './app.routing';
+import { ErrorComponent } from './views/error/error.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { routingModule } from './app.routing';
     PortfolioComponent,
     FooterComponent,
     BlogComponent,
-    DrawingsComponent
+    DrawingsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

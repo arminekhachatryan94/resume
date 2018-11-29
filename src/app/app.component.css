@@ -1,5 +1,6 @@
-
-
 .padding-top {
     padding-top: 45px;
+}
+.min--height {
+    min-height: 500px;
 }

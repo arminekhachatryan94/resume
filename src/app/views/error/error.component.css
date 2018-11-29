@@ -1,0 +1,13 @@
+#error--height {
+    height: auto;
+    line-height: 400px;
+    text-align: center;
+}
+#error--height-child {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text--gray {
+    color: rgb(114, 114, 114);
+}
