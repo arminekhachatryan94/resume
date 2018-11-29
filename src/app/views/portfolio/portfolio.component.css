@@ -57,12 +57,14 @@ img {
     margin: 5px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #fff0d5;
-    border: 1px solid #fde7bd;
+    /* color: rgb(77, 77, 77); */
+    color: rgb(85, 57, 0);
+    background-color: rgb(253, 248, 237);
+    border: 1px solid rgb(253, 238, 209);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -moz-box-shadow:    inset 0 0 5px #fde7bd;
-    -webkit-box-shadow: inset 0 0 5px #fde7bd;
-    box-shadow:         inset 0 0 5px #fde7bd; 
+    -moz-box-shadow: inset 0 0 5px rgb(253, 238, 209);
+    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
+    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
 }
 
 .text--black {
@@ -148,8 +150,16 @@ img {
     padding-left: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 2px solid rgb(221, 221, 221);
-    background-color: rgb(250, 250, 250);
+    color: #553900;
+    background-color: rgb(253, 248, 237);
+    border: 1px solid rgb(252, 232, 193);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -moz-box-shadow: inset 0 0 5px rgb(252, 232, 193);
+    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
+    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
+}
+.about-btns .btn:hover {
+    background: rgb(252, 232, 193);
 }
 
 .about-btns button:hover {
@@ -160,8 +170,13 @@ img {
     padding-right: 20px;
     padding-left: 20px;
     margin-left: 20px;
-    border: 2px solid rgb(221, 221, 221);
-    background-color: rgb(250, 250, 250);
+    color: #553900;
+    background-color: rgb(253, 248, 237);
+    border: 1px solid rgb(252, 232, 193);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -moz-box-shadow: inset 0 0 5px rgb(252, 232, 193);
+    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
+    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
 }
 
 .md-buttons {
