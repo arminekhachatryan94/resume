@@ -1,8 +1,10 @@
 <div>
   <div class="padding-top text-center align-middle padding--lr">
     <div class="font-size text--gray">Drawings</div>
-    <div *ngFor="let drawing of drawings" class="d-inline-block">
-      <img src="{{drawingsPath + drawing}}" class="img-fluid img--size">
+    <div class="slideshow">
+      <slideshow #slideshow
+        [imageUrls]="drawings"
+        ></slideshow>
     </div>
   </div>
 </div>

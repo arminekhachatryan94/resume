@@ -7,15 +7,8 @@
 .font-size {
     font-size: 1.5rem;
 }
-
-/* xs */
-@media (max-height: 768px) {
-    .img--size {
-        width: 100px;
-        padding-right: 10px;
-    }
-    .padding--lr {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+.slideshow {
+    width: 20em;
+    text-align: center;
+    display: inline-block;
 }
