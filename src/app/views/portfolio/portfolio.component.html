@@ -62,8 +62,12 @@
               <div class="col-12 col-md-4 text-pos"><i>{{ edu.start_date }} - {{ edu.end_date }}</i></div>
             </div>
             <div class="row">
-              <div class="col-8">
+              <div class="col-12 col-sm-8">
                 {{edu.degree}} in {{edu.major}}
+              </div>
+              <div class="col-12 col-sm-4 text-pos">	
+                <span>GPA: </span>	
+                {{edu.gpa}}
               </div>
             </div>
             <div *ngIf="edu.honors.length != 0">
@@ -83,7 +87,7 @@
       <div id="projects-bg" class="bg--section vertical--align text-black">
         <div class="display-4 vertical--align-child">PROJECTS</div>
       </div>
-      <section id="projects" class="container-fluid">
+      <section id="projects">
         <div id="projects--content" class="container text-left">
           <div *ngFor="let project of projects" class="projects">
             <div class="row">

@@ -253,4 +253,27 @@ img {
     .about--text {
         padding-top: 20px;
     }
+    
+    #skills.container-fluid {
+        margin: 0px;
+        max-width: 100%;
+        text-align: center;
+    }
+    #education.container-fluid {
+        margin: 0px;
+        max-width: 100%;
+        text-align: center;
+    }
+    #experience {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #education {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #projects {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

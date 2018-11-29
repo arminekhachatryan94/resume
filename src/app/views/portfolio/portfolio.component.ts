@@ -61,6 +61,7 @@ export class PortfolioComponent implements OnInit {
         major: 'Software Engineering',
         start_date: 'Aug 2018',
         end_date: 'present',
+        gpa: '4.0',
         honors: "",
         coursework: [
           'Software Verification and Validation',
@@ -74,6 +75,7 @@ export class PortfolioComponent implements OnInit {
         major: 'Computer Science',
         start_date: 'Aug 2016',
         end_date: 'May 2018',
+        gpa: '3.64',
         honors: "Cum Laude, Dean's list - Fall 2017 and Spring 2018",
         coursework: [
           'Algorithms', 'Software Engineering',
@@ -89,6 +91,7 @@ export class PortfolioComponent implements OnInit {
         major: 'Programming for Computer Science, Mathematics for Transfer',
         start_date: 'Aug 2013',
         end_date: 'June 2016',
+        gpa: '3.47',
         honors: "Dean's list - Spring 2015 and Spring 2016",
         coursework: [
           'Data Structures and Databases', 'Programming in Java',
