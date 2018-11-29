@@ -1,10 +1,21 @@
 .padding-top {
-    padding-top: 20px;
+    padding-top: 0.5rem;
 }
 .text--gray {
     color: gray;
 }
-.padding--lr-50 {
-    padding-left: 10rem;
-    padding-right: 10rem;
+.font-size {
+    font-size: 1.5rem;
+}
+
+/* xs */
+@media (max-height: 768px) {
+    .img--size {
+        width: 100px;
+        padding-right: 10px;
+    }
+    .padding--lr {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

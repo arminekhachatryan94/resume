@@ -1,10 +1,8 @@
 <div>
-  <div class="padding-top text-center align-middle">
-    <div class="display-4 text--gray">Drawings</div>
-    <div *ngFor="let drawing of drawings">
-      <div class="container-fluid padding--lr-50">
-        <img src="{{drawingsPath + drawing}}" class="img-fluid">
-      </div>
+  <div class="padding-top text-center align-middle padding--lr">
+    <div class="font-size text--gray">Drawings</div>
+    <div *ngFor="let drawing of drawings" class="d-inline-block">
+      <img src="{{drawingsPath + drawing}}" class="img-fluid img--size">
     </div>
   </div>
 </div>
