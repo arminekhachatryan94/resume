@@ -44,7 +44,7 @@ img {
 }
 
 #about {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lato', sans-serif;
 }
 
 #skills--content {
@@ -63,7 +63,7 @@ img {
 }
 
 .click-here--color {
-    color: rgb(50, 148, 218);
+    color: rgb(35, 131, 199);
 }
 
 .display-4 {

@@ -43,7 +43,7 @@ export class PortfolioComponent implements OnInit {
       'Javascript', 'jQuery', 'Vue.js', 'Vuex',
       'Express.js', 'Node.js', 'Angular4/6', 'Socket.io',
       'MySQL', 'MongoDB', 'Cassandra',
-      'Java', 'Spring Boot', 'Jswing', 'JavaFX',
+      'Java', 'Spring Boot', 'JSwing', 'JavaFX',
       'C++', 'C',
       'PHPUnit', 'JUnit',
       'Bootstrap', 'CSS', 'HTML',
