@@ -22,20 +22,28 @@ img {
 #experience-bg {
     background-image: linear-gradient(rgba(214, 237, 255, 0.511), rgba(214, 237, 255, 0.511)), url('/assets/images/experience.png');
     background-position: 75% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #education-bg {
     background-image: linear-gradient(rgba(214, 237, 255, 0.411), rgba(214, 237, 255, 0.411)), url('/assets/images/education.png');
     background-position: 10% 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #projects-bg {
     background-image: linear-gradient(rgba(214, 237, 255, 0.311), rgba(214, 237, 255, 0.311)), url('/assets/images/projects.png');
     background-position: 75% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #skills-bg {
     background-image: linear-gradient(rgba(180, 186, 190, 0.311), rgba(180, 186, 190, 0.311)), url('/assets/images/skills.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #skills {
