@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "resume": {
+    "arminekhachatryan94.github.io": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/resume",
+            "outputPath": "dist/arminekhachatryan94.github.io",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "resume:build"
+            "browserTarget": "arminekhachatryan94.github.io:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "resume:build:production"
+              "browserTarget": "arminekhachatryan94.github.io:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "resume:build"
+            "browserTarget": "arminekhachatryan94.github.io:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "resume-e2e": {
+    "arminekhachatryan94.github.io-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "resume:serve"
+            "devServerTarget": "arminekhachatryan94.github.io:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "resume:serve:production"
+              "devServerTarget": "arminekhachatryan94.github.io:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "resume"
+  "defaultProject": "arminekhachatryan94.github.io"
 }
