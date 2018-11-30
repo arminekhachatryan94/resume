@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -14,8 +13,8 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.hover_color = 'rgb(240, 240, 240)';
-    this.click_color = 'rgb(221, 221, 221)';
+    this.hover_color = 'rgb(245, 249, 253)';
+    this.click_color = 'rgb(222, 240, 255)';
     let path = window.location.pathname;
     if(path == '/') {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;

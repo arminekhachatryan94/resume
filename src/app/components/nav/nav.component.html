@@ -1,11 +1,11 @@
 <nav class="fixed-top">
   <div id="bar">
-    <ul class="nav text--gray navbar-custom float-left">
+    <ul class="nav navbar-custom float-left">
       <li id="armine" class="nav-item">
         <div [routerLink]="['']" class="nav-link" (mouseover)="onMouseOver('armine')" (mouseleave)="onMouseLeave('armine')" (click)="onClick('Portfolio')">Armine Khachatryan</div>
       </li>
     </ul>
-    <ul class="nav text--gray navbar-custom float-right">
+    <ul class="nav navbar-custom float-right">
       <li id="icon" class="nav-item padding" (mouseover)="onMouseOver('icon')" (mouseleave)="onMouseLeave('icon')">
         <a class="nav-link" (click)="hamburgerBar()">
           <div id="bar1"></div>
@@ -16,7 +16,7 @@
     </ul>
   </div>
 
-  <ul id="hamburger" class="nav text--gray navbar-custom float-right">
+  <ul id="hamburger" class="nav navbar-custom float-right">
     <li id="portfolio" class="nav-item padding">
       <div [routerLink]="['']" class="nav-link" (click)="onClick('Portfolio')" (mouseover)="onMouseOver('portfolio')" (mouseleave)="onMouseLeave('portfolio')">Portfolio</div>
     </li>

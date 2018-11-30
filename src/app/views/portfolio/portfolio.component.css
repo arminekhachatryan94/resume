@@ -20,22 +20,22 @@ img {
 }
 
 #experience-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.511), rgba(214, 237, 255, 0.511)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
     background-position: 75% 25%;
 }
 
 #education-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('http://images6.fanpop.com/image/photos/40600000/tumblr-static-djptrlstifwwk40so0cg4sk80-1024-booknerd-40616610-1024-682.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.411), rgba(214, 237, 255, 0.411)), url('http://images6.fanpop.com/image/photos/40600000/tumblr-static-djptrlstifwwk40so0cg4sk80-1024-booknerd-40616610-1024-682.jpg');
     background-position: 10% 90%;
 }
 
 #projects-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, .2)), url('https://s3.amazonaws.com/s3.imagefinder.co/uploads/2016/01/23135240/boss-fight-free-high-quality-stock-images-photos-photography-computer-programming-code-notebook-computer-macbook-cup-coffee-960x640.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.311), rgba(214, 237, 255, 0.311)), url('https://s3.amazonaws.com/s3.imagefinder.co/uploads/2016/01/23135240/boss-fight-free-high-quality-stock-images-photos-photography-computer-programming-code-notebook-computer-macbook-cup-coffee-960x640.jpg');
     background-position: 75% 25%;
 }
 
 #skills-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url('https://ak2.picdn.net/shutterstock/videos/12845822/thumb/1.jpg');
+    background-image: linear-gradient(rgba(180, 186, 190, 0.311), rgba(180, 186, 190, 0.311)), url('https://image.freepik.com/free-photo/no-translate-detected_3248-330.jpg');
 }
 
 #skills {
@@ -55,16 +55,20 @@ img {
 #skills--content li {
     display: inline;
     margin: 5px;
-    padding: 5px 10px;
+    padding: 2px 5px;
     border-radius: 5px;
-    /* color: rgb(77, 77, 77); */
-    color: rgb(85, 57, 0);
-    background-color: rgb(253, 248, 237);
-    border: 1px solid rgb(253, 238, 209);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -moz-box-shadow: inset 0 0 5px rgb(253, 238, 209);
-    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
-    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
+    color: white;
+    background-color: rgb(50, 148, 218);
+    font-family: 'Lato', sans-serif;
+}
+
+.click-here--color {
+    color: rgb(50, 148, 218);
+}
+
+.display-4 {
+    font-size: 300%;
+    font-weight: 400;
 }
 
 .text--black {
@@ -144,39 +148,34 @@ img {
 }
 
 .about-btns button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    color: #553900;
-    background-color: rgb(253, 248, 237);
-    border: 1px solid rgb(252, 232, 193);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -moz-box-shadow: inset 0 0 5px rgb(252, 232, 193);
-    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
-    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
+    color: white;
+    background-color: rgb(36, 130, 197);
+    border: 1px solid rgb(96, 169, 221);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
 }
 .about-btns .btn:hover {
-    background: rgb(252, 232, 193);
-}
-
-.about-btns button:hover {
-    background-color: rgb(240, 240, 240);
+    background: rgb(96, 169, 221);
 }
 
 .view-btn {
     padding-right: 20px;
     padding-left: 20px;
     margin-left: 20px;
-    color: #553900;
-    background-color: rgb(253, 248, 237);
-    border: 1px solid rgb(252, 232, 193);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -moz-box-shadow: inset 0 0 5px rgb(252, 232, 193);
-    -webkit-box-shadow: inset 0 0 5px rgb(253, 238, 209);
-    box-shadow: inset 0 0 5px rgb(253, 238, 209); 
+    color: white;
+    background-color: rgb(36, 130, 197);
+    border: 1px solid rgb(96, 169, 221);
+    font-family: 'Lato', sans-serif;
+}
+
+.view-btn:hover {
+    background: rgb(96, 169, 221);
 }
 
 .md-buttons {
@@ -185,10 +184,6 @@ img {
 
 .sm-buttons {
     display: block;
-}
-
-.view-btn:hover {
-    background-color: rgb(240, 240, 240);
 }
 
 .about--text {
