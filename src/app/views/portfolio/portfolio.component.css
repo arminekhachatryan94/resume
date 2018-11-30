@@ -20,22 +20,22 @@ img {
 }
 
 #experience-bg {
-    background-image: linear-gradient(rgba(214, 237, 255, 0.511), rgba(214, 237, 255, 0.511)), url('http://www.diena.lt/sites/default/files/Vilniausdiena/Vartotoju%20zona/v.virkutyte/code-2620118_960_720.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.511), rgba(214, 237, 255, 0.511)), url('/assets/images/experience.png');
     background-position: 75% 25%;
 }
 
 #education-bg {
-    background-image: linear-gradient(rgba(214, 237, 255, 0.411), rgba(214, 237, 255, 0.411)), url('http://images6.fanpop.com/image/photos/40600000/tumblr-static-djptrlstifwwk40so0cg4sk80-1024-booknerd-40616610-1024-682.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.411), rgba(214, 237, 255, 0.411)), url('/assets/images/education.png');
     background-position: 10% 90%;
 }
 
 #projects-bg {
-    background-image: linear-gradient(rgba(214, 237, 255, 0.311), rgba(214, 237, 255, 0.311)), url('https://s3.amazonaws.com/s3.imagefinder.co/uploads/2016/01/23135240/boss-fight-free-high-quality-stock-images-photos-photography-computer-programming-code-notebook-computer-macbook-cup-coffee-960x640.jpg');
+    background-image: linear-gradient(rgba(214, 237, 255, 0.311), rgba(214, 237, 255, 0.311)), url('/assets/images/projects.png');
     background-position: 75% 25%;
 }
 
 #skills-bg {
-    background-image: linear-gradient(rgba(180, 186, 190, 0.311), rgba(180, 186, 190, 0.311)), url('https://image.freepik.com/free-photo/no-translate-detected_3248-330.jpg');
+    background-image: linear-gradient(rgba(180, 186, 190, 0.311), rgba(180, 186, 190, 0.311)), url('/assets/images/skills.png');
 }
 
 #skills {

@@ -10,12 +10,14 @@ export class PortfolioComponent implements OnInit {
   education: Object[];
   projects: Object[];
   skills: String[];
+  path: String;
   
   ngOnInit() {
     this.setExperiences()
     this.setEducations();
     this.setSkills();
     this.setProjects();
+    this.path = document.location.pathname + "";
   }
 
   navigate(location) {
