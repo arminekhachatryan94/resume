@@ -12,3 +12,18 @@
     text-align: center;
     display: inline-block;
 }
+/* .display--inline {
+    display: inline;
+}
+
+@media (max-width: 500px) {
+    .icons {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) {
+    .icons {
+        display: inline;
+    }
+} */

@@ -201,6 +201,25 @@ img {
     text-align: left;
 }
 
+@media only screen
+and (max-width: 1024px) {
+    .bg--section {
+        background-attachment: scroll;
+    }
+    #education-bg {
+        background-position: center center;
+    }
+    #experience-bg {
+        background-position: center center;
+    }
+    #projects-bg {
+        background-position: center center;
+    }
+    #skills-bg {
+        background-position: center center;
+    }
+}
+
 @media (max-width: 992px) {
     #experience .text-pos {
         text-align: left;
@@ -216,10 +235,6 @@ img {
 
     .about--text {
         text-align: center;
-    }
-
-    .bg--section {
-        background-attachment: scroll;
     }
 
     .vertical--align {
