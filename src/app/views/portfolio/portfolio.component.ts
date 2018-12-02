@@ -208,6 +208,15 @@ export class PortfolioComponent implements OnInit {
         url: 'https://github.com/arminekhachatryan94/meddit'
       },
       {
+        name: 'Java Testing',
+        description: [
+          'Automated tests for binary trees (BFS, DFS, max depth, node count)',
+          'Property-based testing on arithmetic operations'
+        ],
+        technologies: 'Java, JUnit, Maven',
+        url: 'https://github.com/arminekhachatryan94/testing'
+      },
+      {
         name: 'Calculator',
         description: [
           'Calculator desktop application with unit tests'
