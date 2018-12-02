@@ -12,4 +12,4 @@ const routes: Routes = [
     { path: '**', component: ErrorComponent }
 ];
 
-export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes, {useHash: true});

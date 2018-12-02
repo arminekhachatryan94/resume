@@ -63,7 +63,6 @@ export class NavComponent implements OnInit {
     }
 
     if(name == 'resume') {
-      console.log('resume');
       window.location.href = 'assets/Armine_Khachatryan_Resume.pdf';
     }
 

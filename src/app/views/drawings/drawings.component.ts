@@ -37,7 +37,6 @@ export class DrawingsComponent implements OnInit {
   }
 
   setupSlideShow() {
-    console.log(this.slideshow);
     this.slideshow.backgroundSize="cover";
     this.slideshow.backgroundRepeat="no-repeat";
     this.slideshow.height="500px";
