@@ -15,23 +15,23 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.hover_color = 'rgb(245, 249, 253)';
     this.click_color = 'rgb(222, 240, 255)';
-    let path = window.location.pathname;
-    if(path == '/') {
+    let path = window.location.hash;
+    if(path == '#/') {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
-    } else if(path == '/blog') {
+    } else if(path == '#/blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
     }
   }
 
   @HostListener('window:popstate', ['$event'])
   resetClickedNavElement() {
-    let path = window.location.pathname;
-    if(path == '/') {
-      path = '/portfolio';
+    let path = window.location.hash;
+    if(path == '#/') {
+      path = '#/portfolio';
     }
     var items = document.querySelectorAll('#hamburger .nav-item');
     for(let i = 0; i < items.length; i++) {
-      if('/' + items[i].firstElementChild.innerHTML.toLowerCase() == path) {
+      if('#/' + items[i].firstElementChild.innerHTML.toLowerCase() == path) {
         (<HTMLElement>items[i]).style.backgroundColor = this.click_color;
       } else {
         (<HTMLElement>items[i]).style.backgroundColor = "";
@@ -69,10 +69,10 @@ export class NavComponent implements OnInit {
   }
 
   onMouseOver(name) {
-    let path = window.location.pathname;
-    if(path == '/' && name == 'portfolio') {
+    let path = window.location.hash;
+    if(path == '#/' && name == 'portfolio') {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
-    } else if(path == '/blog' && name == 'blog') {
+    } else if(path == '#/blog' && name == 'blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
     } else {
       document.getElementById(name).style.backgroundColor = this.hover_color;
@@ -80,10 +80,10 @@ export class NavComponent implements OnInit {
   }
 
   onMouseLeave(name) {
-    let path = window.location.pathname;
-    if(path == '/' && name == 'portfolio') {
+    let path = window.location.hash;
+    if(path == '#/' && name == 'portfolio') {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
-    } else if(path == '/blog' && name == 'blog') {
+    } else if(path == '#/blog' && name == 'blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
     } else {
       document.getElementById(name).style.backgroundColor = "";
