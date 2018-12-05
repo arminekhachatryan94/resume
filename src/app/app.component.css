@@ -1,6 +1,6 @@
 .padding-top {
     padding-top: 45px;
 }
-.min--height {
-    min-height: 500px;
+.content {
+    min-height: calc(100vh - 140px);
 }
