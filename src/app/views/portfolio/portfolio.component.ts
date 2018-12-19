@@ -13,6 +13,10 @@ export class PortfolioComponent implements OnInit {
   path: String;
   
   ngOnInit() {
+    // scroll to top of page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    
     this.setExperiences()
     this.setEducations();
     this.setSkills();

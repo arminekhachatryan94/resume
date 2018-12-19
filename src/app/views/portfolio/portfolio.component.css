@@ -48,7 +48,19 @@ img {
 
 #skills {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+}
+
+#skills::after {
+    content: "\203A";
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 #about {

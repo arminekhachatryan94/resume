@@ -13,14 +13,6 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.hover_color = 'rgb(245, 249, 253)';
-    this.click_color = 'rgb(222, 240, 255)';
-    let path = window.location.hash;
-    if(path == '#/') {
-      document.getElementById('portfolio').style.backgroundColor = this.click_color;
-    } else if(path == '#/blog') {
-      document.getElementById('blog').style.backgroundColor = this.click_color;
-    }
   }
 
   @HostListener('window:popstate', ['$event'])
@@ -36,6 +28,16 @@ export class NavComponent implements OnInit {
       } else {
         (<HTMLElement>items[i]).style.backgroundColor = "";
       }
+    }
+  }
+
+  setTabStyle(name) {
+    this.click_color = 'rgb(222, 240, 255)';
+    let path = window.location.hash;
+    if(path == '#/' && name == 'portfolio') {
+      return this.click_color;
+    } else if(path == '#/blog' && name == 'blog') {
+      return this.click_color;
     }
   }
 

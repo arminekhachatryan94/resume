@@ -10,6 +10,9 @@ export class BlogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // scroll to top of page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
 }

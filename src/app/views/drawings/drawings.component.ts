@@ -16,6 +16,10 @@ export class DrawingsComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
+    // scroll to top of page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     this.drawingsPath = window.location.origin + "/assets/drawings/";
     this.getDrawings();
     this.setupSlideShow();

@@ -11,6 +11,9 @@ export class ErrorComponent implements OnInit {
   constructor(private _location: Location) { }
 
   ngOnInit() {
+    // scroll to top of page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;    
   }
 
   goBack() {
