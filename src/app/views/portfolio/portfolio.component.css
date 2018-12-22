@@ -51,18 +51,6 @@ img {
     padding-bottom: 40px;
 }
 
-#skills::after {
-    content: "\203A";
-    position: absolute;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    cursor: pointer;
-    border: 1px solid black;
-}
-
 #about {
     font-family: 'Lato', sans-serif;
 }
@@ -80,6 +68,19 @@ img {
     color: white;
     background-color: rgb(50, 148, 218);
     font-family: 'Lato', sans-serif;
+}
+
+#arrow-up {
+    color: gray;
+    cursor: pointer;
+    background: white;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.scroll {
+    padding-bottom: 20px;
 }
 
 .click-here--color {

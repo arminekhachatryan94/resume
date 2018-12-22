@@ -24,6 +24,11 @@ export class PortfolioComponent implements OnInit {
     this.path = document.location.pathname + "";
   }
 
+  scrollUp() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   navigate(location) {
     if( location == 'github' ){
       window.location.href = 'https://github.com/arminekhachatryan94/';
@@ -206,7 +211,7 @@ export class PortfolioComponent implements OnInit {
           'Full stack forum similar to Reddit\'s UI design',
           'Authentication, Authorization, user roles, and comments on comments functionality',
           'SPA using Vue Router',
-          'Unit and Automated Tests, and currently applying Selenium testing'
+          'Automated unit tests'
         ],
         technologies: 'Laravel, Vue.js, MySQL, PHPUnit',
         url: 'https://github.com/arminekhachatryan94/meddit'
@@ -219,6 +224,19 @@ export class PortfolioComponent implements OnInit {
         ],
         technologies: 'Java, JUnit, Maven',
         url: 'https://github.com/arminekhachatryan94/testing'
+      },
+      {
+        name: 'FacebookLite',
+        description: [
+          'Simple facebook desktop app',
+          'Developed in a team of four',
+          'DAO Design Pattern',
+          'User registration and login',
+          'Users can create and delete posts and friends and update their status, as well as view both their profile and their friend\'s profile',
+          'Users can also toggle the visibility of their age, status, posts, and friends'
+        ],
+        technologies: 'JavaFX, MySQL',
+        url: 'https://github.com/arminekhachatryan94/facebooklite'
       },
       {
         name: 'Calculator',
@@ -263,9 +281,10 @@ export class PortfolioComponent implements OnInit {
         name: 'Blog Project',
         description: [
           'Full stack blog web application',
-          'MVC and SPA that uses foreign keys, ORM, authentication, authorization, unit testing (Jasmine and Karma for Angular 2, and PHPUnit for Laravel), CRUD, and SOLID principles'
+          'MVC and SPA that uses foreign keys, ORM, authentication, authorization, unit testing (Jasmine and Karma for Angular 4, and PHPUnit for Laravel), CRUD, and SOLID principles',
+          'Deployed with AWS and Azure'
         ],
-        technologies: 'Laravel, Angular 2, MySQL, Jasmine, Karma, and PHPUnit',
+        technologies: 'Laravel, Angular 4, MySQL, Jasmine, Karma, and PHPUnit',
         url: 'https://github.com/arminekhachatryan94/blog_project'
       },
       {
