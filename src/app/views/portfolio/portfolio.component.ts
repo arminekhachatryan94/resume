@@ -57,7 +57,7 @@ export class PortfolioComponent implements OnInit {
       'Java', 'Spring Boot', 'JSwing', 'JavaFX',
       'C++', 'C',
       'PHPUnit', 'JUnit',
-      'Bootstrap', 'CSS', 'HTML',
+      'Bootstrap', 'CSS', 'HTML', 'Responsive Web Design',
       'Agile', 'Scrum', 'Git', 'Github', 'Jira',
       'Unit Testing', 'Automated Testing',
       'LAMP', 'MEVN'
@@ -210,7 +210,12 @@ export class PortfolioComponent implements OnInit {
         description: [
           'Full stack forum similar to Reddit\'s UI design',
           'Authentication, Authorization, user roles, and comments on comments functionality',
+          'Laravel REST API',
           'SPA using Vue Router',
+<<<<<<< Updated upstream
+=======
+          'Eloquent ORM',
+>>>>>>> Stashed changes
           'Automated unit tests'
         ],
         technologies: 'Laravel, Vue.js, MySQL, PHPUnit',
