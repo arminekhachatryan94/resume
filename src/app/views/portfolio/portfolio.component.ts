@@ -212,10 +212,7 @@ export class PortfolioComponent implements OnInit {
           'Authentication, Authorization, user roles, and comments on comments functionality',
           'Laravel REST API',
           'SPA using Vue Router',
-<<<<<<< Updated upstream
-=======
           'Eloquent ORM',
->>>>>>> Stashed changes
           'Automated unit tests'
         ],
         technologies: 'Laravel, Vue.js, MySQL, PHPUnit',
