@@ -17,10 +17,10 @@
   </div>
 
   <ul id="hamburger" class="nav navbar-custom float-right">
-    <li id="portfolio" class="nav-item padding" [style.background-color]="setTabStyle('portfolio')">
+    <li id="portfolio" class="nav-item padding" [ngClass]="{'light-blue': setTabStyle('portfolio')}">
       <div [routerLink]="['']" class="nav-link" (click)="onClick('Portfolio')" (mouseover)="onMouseOver('portfolio')" (mouseleave)="onMouseLeave('portfolio')">Portfolio</div>
     </li>
-    <li id="blog" class="nav-item padding" [style.background-color]="setTabStyle('blog')">
+    <li id="blog" class="nav-item padding" [ngClass]="{'light-blue': setTabStyle('blog')}">
       <div [routerLink]="['blog']" class="nav-link" (mouseover)="onMouseOver('blog')" (click)="onClick('Blog')" (mouseleave)="onMouseLeave('blog')">Blog</div>
     </li>
     <li id="resume" class="nav-item padding">

@@ -6,13 +6,14 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
   hover_color: string;
   click_color: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.hover_color = 'rgb(245, 249, 253)';	
+    this.click_color = 'rgb(222, 240, 255)';
   }
 
   @HostListener('window:popstate', ['$event'])
@@ -32,13 +33,13 @@ export class NavComponent implements OnInit {
   }
 
   setTabStyle(name) {
-    this.click_color = 'rgb(222, 240, 255)';
     let path = window.location.hash;
     if(path == '#/' && name == 'portfolio') {
-      return this.click_color;
+      return true;
     } else if(path == '#/blog' && name == 'blog') {
-      return this.click_color;
+      return true;
     }
+    return false;
   }
 
   onClick(name) {
@@ -67,7 +68,6 @@ export class NavComponent implements OnInit {
     if(name == 'resume') {
       window.location.href = 'assets/Armine_Khachatryan_Resume.pdf';
     }
-
   }
 
   onMouseOver(name) {

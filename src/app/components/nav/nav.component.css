@@ -20,6 +20,10 @@ nav {
     display: block;
 }
 
+.light-blue {
+    background-color: rgb(222, 240, 255);
+}
+
 li {
     cursor: pointer;
 }
@@ -40,6 +44,8 @@ a {
     margin: 4px 0;
     transition: all 1s ease;
 }
+
+
 
 @media screen and (max-width: 800px) {
     #hamburger {
