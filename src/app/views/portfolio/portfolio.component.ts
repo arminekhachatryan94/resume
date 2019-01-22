@@ -120,7 +120,7 @@ export class PortfolioComponent implements OnInit {
         start_date: 'Sept 2018',
         end_date: 'present',
         company: 'META+Lab',
-        position: 'Software Developer',
+        position: 'Scrum Master and Software Developer',
         projects: [
           {
             name: '10Letters',
