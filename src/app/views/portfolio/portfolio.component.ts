@@ -71,12 +71,15 @@ export class PortfolioComponent implements OnInit {
         degree: 'Master of Science',
         major: 'Software Engineering',
         start_date: 'Aug 2018',
-        end_date: 'present',
-        gpa: '4.0',
+        end_date: 'Dec 2019',
+        gpa: '3.9',
         honors: "",
         coursework: [
           'Software Verification and Validation',
           'Graphical User Interfaces', 'Software Architecture and Design',
+          'Advanced Topics in Software Engineering',
+          'Software Engineering Management',
+          'Language Design and Compilers',
           'Software Metrics'
         ]
       },
@@ -200,7 +203,8 @@ export class PortfolioComponent implements OnInit {
         name: 'Coffee Shop',
         description: [
           'Basic web application with CRUD for admins to update the menu for customers',
-          'Plan to add user login and registration, as well as event sourcing using Apache Kafka'
+          'Plan to add user login and registration, as well as event sourcing using Apache Kafka',
+          'Followed the repository pattern'
         ],
         technologies: 'Spring Boot, Angular 6, Apache Cassandra',
         url: 'https://github.com/arminekhachatryan94/coffee-shop'
@@ -210,6 +214,7 @@ export class PortfolioComponent implements OnInit {
         description: [
           'Full stack forum similar to Reddit\'s UI design',
           'Authentication, Authorization, user roles, and comments on comments functionality',
+          'Repository pattern',
           'Laravel REST API',
           'SPA using Vue Router',
           'Eloquent ORM',
