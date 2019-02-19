@@ -14,6 +14,7 @@ import { DrawingsComponent } from './views/drawings/drawings.component';
 
 import { routingModule } from './app.routing';
 import { ErrorComponent } from './views/error/error.component';
+import { ExampleComponent } from './views/example/example.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ErrorComponent } from './views/error/error.component';
     FooterComponent,
     BlogComponent,
     DrawingsComponent,
-    ErrorComponent
+    ErrorComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,

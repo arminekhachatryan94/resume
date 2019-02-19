@@ -129,8 +129,12 @@ export class PortfolioComponent implements OnInit {
             name: '10Letters',
             summary: 'A web application that helps transform individuals through goal-setting, self-evaluation/personal accountability, and mentorship.',
             description: [
+              `Currently leading the development team towards completion of the application
+              through weekly scrum ceremonies, as well as communicating with clients
+              and product owners to discuss project goals and deadlines`,
               'Refactored and improved query efficiency with eager loading',
-              'Styled new pages', 'Created middleware',
+              'Styled new pages',
+              'Created middleware',
               'Refactored functions to API and used Axios to get the data',
               'Utilized Vue Croppa to crop and upload profile images',
               'Technologies: Laravel, Vue.js, MySQL, SASS, Docker, Travis CI'

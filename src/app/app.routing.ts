@@ -4,11 +4,13 @@ import { PortfolioComponent } from "./views/portfolio/portfolio.component";
 import { BlogComponent } from "./views/blog/blog.component";
 import { DrawingsComponent } from "./views/drawings/drawings.component";
 import { ErrorComponent } from "./views/error/error.component";
+import { ExampleComponent } from "./views/example/example.component";
 
 const routes: Routes = [
     { path: '', component: PortfolioComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'drawings', component: DrawingsComponent },
+    { path: 'example', component: ExampleComponent },
     { path: '**', component: ErrorComponent }
 ];
 
