@@ -53,14 +53,15 @@ export class PortfolioComponent implements OnInit {
       'PHP', 'Laravel', 'Lumen',
       'Javascript', 'jQuery', 'Vue.js', 'Vuex',
       'Express.js', 'Node.js', 'Angular4/6', 'Socket.io',
-      'MySQL', 'MongoDB', 'Cassandra',
+      'MySQL', 'PostgreSQL', 'MongoDB', 'Cassandra',
       'Java', 'Spring Boot', 'JSwing', 'JavaFX',
       'C++', 'C',
       'PHPUnit', 'JUnit',
-      'Bootstrap', 'CSS', 'HTML', 'Responsive Web Design',
-      'Agile', 'Scrum', 'Git', 'Github', 'Jira',
+      'Bootstrap', 'Vuetify', 'CSS', 'HTML', 'Responsive Web Design',
+      'Agile', 'Scrum', 'Git', 'Github', 'Jira', 'Bitbucket', 'GitLab',
       'Unit Testing', 'Automated Testing',
-      'LAMP', 'MEVN'
+      'LAMP', 'MEVN',
+      'Postman', 'Docker'
     ];
   }
 
@@ -72,7 +73,7 @@ export class PortfolioComponent implements OnInit {
         major: 'Software Engineering',
         start_date: 'Aug 2018',
         end_date: 'Dec 2019',
-        gpa: '3.9',
+        gpa: '3.84',
         honors: "",
         coursework: [
           'Software Verification and Validation',
@@ -80,7 +81,10 @@ export class PortfolioComponent implements OnInit {
           'Advanced Topics in Software Engineering',
           'Software Engineering Management',
           'Language Design and Compilers',
-          'Software Metrics'
+          'Software Metrics',
+          'Software Requirements Analysis and Specification',
+          'Directed Graduate Research',
+          'Thesis or Graduate Project'
         ]
       },
       {
@@ -120,8 +124,37 @@ export class PortfolioComponent implements OnInit {
   setExperiences() {
     this.experience = [
       {
-        start_date: 'Sept 2018',
+        start_date: 'May 2019',
         end_date: 'present',
+        company: 'Contract Services Administration Trust Fund',
+        position: 'Software Developer',
+        projects: [
+          {
+            name: 'Internal projects',
+            description: [
+              'Contributed to a web API',
+              'Added multiple filters and search ability to the application',
+              'Utilized database views and functions to retrieve complex data',
+              'Wrote tests and maintained 90% code coverage',
+              'Utilized the repository pattern to abstract away data access',
+              'Styled components and created modals',
+              'Used the Vuex store to execute and load data from axios requests',
+              'Technologies: PHP, Laravel, JavaScript, Vue, Nuxt, Vuex, Vuetify, PHPUnit, Jest, Telescope, PostgreSQL, GitLab, Docker'
+            ],
+          },
+          {
+            name: 'TEAM',
+            description: [
+              'fixed bugs',
+              'added new features',
+              'Technologies: PHP, Laravel, Nova, JavaScript, Vue, Vuex, Vuetify, PHPUnit, PostgreSQL, Bitbucket, Jira, Docker'
+            ]
+          }
+        ]
+      },
+      {
+        start_date: 'Sept 2018',
+        end_date: 'May 2019',
         company: 'META+Lab',
         position: 'Scrum Master and Software Developer',
         projects: [
@@ -138,7 +171,7 @@ export class PortfolioComponent implements OnInit {
               'Created middleware',
               'Refactored functions to API and used Axios to get the data',
               'Utilized Vue Croppa to crop and upload profile images',
-              'Technologies: Laravel, Vue.js, Vuex, MySQL, SASS, Docker, Travis CI'
+              'Technologies: PHP, Laravel, JavaScript, Vue.js, Vuex, MySQL, SASS, Docker, Travis CI'
             ],
           }
         ]
@@ -155,7 +188,7 @@ export class PortfolioComponent implements OnInit {
             description: [
               'Utilized repository pattern to ensure the abstraction of infrastructure and domain',
               'Leveraged test-driven development to establish a project guideline',
-              'Technologies: Lumen, MySQL, PHPUnit'
+              'Technologies: PHP, Lumen, MySQL, PHPUnit'
             ],
 
           }
@@ -204,6 +237,27 @@ export class PortfolioComponent implements OnInit {
 
   setProjects() {
     this.projects = [
+      {
+        name: 'Algorithm Visualization (Graduate Project)',
+        description: [
+          'An algorithm visualization (AV) tool that helps the students and instructors of CSUN teach/learn algorithms in a classroom',
+          'Rather than drawing complex graphs and charts on a whiteboard, instructors may demonstrate examples using this AV tool',
+          'Users may save the problem to their local machine and load it into the tool later on when they are asking an instructor questions',
+          'Algorithms covered: Counting Inversions, Kruskal\'s Minimum/Maximum Spanning Tree, and Steiner Tree.'
+        ],
+        technologies: 'Angular 7, TypeScript, Git, Github, D3, CytoScape.js',
+        url: 'https://github.com/arminekhachatryan94/visual-algos'
+      },
+      {
+        name: '360 Job Search',
+        description: [
+          'Job search web application for recruiters and job seekers',
+          'Real-time messaging for recruiters to reach out to applicants',
+          'Chatbot for both guests and users for assistance'
+        ],
+        technologies: 'Spring Boot 2, Angular 7, MySQL, Python, Google Cloud Platform, Heroku, Git, Maven, Hibernate, Tomcat, JUnit, Mockito, Auth0, Apache Kafka',
+        url: 'https://github.com/arminekhachatryan94/360-job-search'
+      },
       {
         name: 'Coffee Shop',
         description: [
