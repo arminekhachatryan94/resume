@@ -38,6 +38,8 @@ export class NavComponent implements OnInit {
       return true;
     } else if(path == '#/blog' && name == 'blog') {
       return true;
+    } else if(path == '#/thesis' && name == 'thesis') {
+      return true;
     }
     return false;
   }
@@ -76,6 +78,8 @@ export class NavComponent implements OnInit {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
     } else if(path == '#/blog' && name == 'blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
+    } else if(path == '#/thesis' && name == 'thesis') {
+      document.getElementById('thesis').style.backgroundColor = this.click_color;
     } else {
       document.getElementById(name).style.backgroundColor = this.hover_color;
     }
@@ -87,6 +91,8 @@ export class NavComponent implements OnInit {
       document.getElementById('portfolio').style.backgroundColor = this.click_color;
     } else if(path == '#/blog' && name == 'blog') {
       document.getElementById('blog').style.backgroundColor = this.click_color;
+    } else if(path == '#/thesis' && name == 'thesis') {
+      document.getElementById('thesis').style.backgroundColor = this.click_color;
     } else {
       document.getElementById(name).style.backgroundColor = "";
     }

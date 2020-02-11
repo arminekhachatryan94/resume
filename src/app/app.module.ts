@@ -15,6 +15,7 @@ import { DrawingsComponent } from './views/drawings/drawings.component';
 import { routingModule } from './app.routing';
 import { ErrorComponent } from './views/error/error.component';
 import { ExampleComponent } from './views/example/example.component';
+import { HomeComponent } from './views/thesis/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ExampleComponent } from './views/example/example.component';
     BlogComponent,
     DrawingsComponent,
     ErrorComponent,
-    ExampleComponent
+    ExampleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
