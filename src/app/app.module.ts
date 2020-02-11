@@ -14,8 +14,8 @@ import { DrawingsComponent } from './views/drawings/drawings.component';
 
 import { routingModule } from './app.routing';
 import { ErrorComponent } from './views/error/error.component';
-import { ExampleComponent } from './views/example/example.component';
 import { HomeComponent } from './views/thesis/home/home.component';
+import { ThesisNavComponent } from './components/thesis-nav/thesis-nav.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,8 @@ import { HomeComponent } from './views/thesis/home/home.component';
     BlogComponent,
     DrawingsComponent,
     ErrorComponent,
-    ExampleComponent,
-    HomeComponent
+    HomeComponent,
+    ThesisNavComponent
   ],
   imports: [
     BrowserModule,
