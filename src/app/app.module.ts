@@ -16,6 +16,9 @@ import { routingModule } from './app.routing';
 import { ErrorComponent } from './views/error/error.component';
 import { HomeComponent } from './views/thesis/home/home.component';
 import { ThesisNavComponent } from './components/thesis-nav/thesis-nav.component';
+import { CytoService } from './services/cyto.service';
+import { D3Service } from './services/d3.service';
+import { FileService } from './services/file.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { ThesisNavComponent } from './components/thesis-nav/thesis-nav.component
     SlideshowModule,
     routingModule
   ],
-  providers: [],
+  providers: [CytoService, D3Service, FileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
