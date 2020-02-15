@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 /* components */
@@ -19,6 +20,7 @@ import { ThesisNavComponent } from './components/thesis-nav/thesis-nav.component
 import { CytoService } from './services/cyto.service';
 import { D3Service } from './services/d3.service';
 import { FileService } from './services/file.service';
+import { CountingInversionsComponent } from './views/thesis/counting-inversions/counting-inversions.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { FileService } from './services/file.service';
     DrawingsComponent,
     ErrorComponent,
     HomeComponent,
-    ThesisNavComponent
+    ThesisNavComponent,
+    CountingInversionsComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     SlideshowModule,
-    routingModule
+    routingModule,
+    FormsModule
   ],
   providers: [CytoService, D3Service, FileService],
   bootstrap: [AppComponent]
