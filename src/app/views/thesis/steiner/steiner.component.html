@@ -1,0 +1,296 @@
+<header>
+  <thesis-nav></thesis-nav>
+</header>
+
+<main>
+  <div>
+    <div class="h4 text-left">Steiner Tree</div>
+  
+    <div *ngIf="!solving" class="row menu">
+      <div class="col-6 text-left">
+        <div class="dropdown display-inline">
+          <button class="btn btn-info dropdown-toggle" type="button" id="file" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            File
+          </button>
+          <div class="dropdown-menu" aria-labelledby="file">
+            <a class="dropdown-item" data-toggle="modal" data-target="#saveModal" (click)="getStringFromGraph()">Save As Text File</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#uploadModal">Upload Text File</a>
+          </div>
+        </div>
+  
+        <div class="dropdown display-inline">
+          <button class="btn btn-info dropdown-toggle" type="button" id="steinerExamples" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Examples
+          </button>
+          <div class="dropdown-menu" aria-labelledby="steinerExamples">
+            <a *ngFor="let g of exampleGraphs" class="dropdown-item" (click)="useExampleGraph(g)">{{ g.name }}</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-6 text-right">
+        <div class="display-inline">
+          <button class="btn btn-info" type="button" data-toggle="modal" data-target="#problemModal">Problem</button>
+        </div>
+  
+        <div class="display-inline">
+          <button class="btn btn-info" type="button" data-toggle="modal" data-target="#pseudoModal">Pseudo Code</button>
+        </div>
+  
+        <div class="display-inline">
+          <button class="btn btn-info" type="button" data-toggle="modal" data-target="#hintModal">&#63;</button>
+        </div>
+      </div>
+    </div>
+  
+    <hr>
+    <!-- graphs -->
+    <div class="row">
+      <div class="col-5">
+        <div>Current Graph</div>
+        <div *ngIf="weightSum !== null" class="text-primary">Tree weight: {{ weightSum }}</div>
+        <div id="current" class="text-left"></div>
+      </div>
+      <div class="col-7">
+        <div class="row col-12">
+          <div class="col-5">
+            <div *ngIf="solving">{{ finished ? 'Final' : 'Possible'}} Steiner Tree</div>
+            <div *ngIf="optimalWeightSum !== null" [ngClass]="{'text-danger': finished, 'text-primary': !finished, 'font-weight-bold': finished }">Tree weight: {{ optimalWeightSum }}</div>
+            <div id="optimal" class="text-left"></div>
+          </div>
+          <div *ngIf="messages.length" class="col-7 message-scroll-panel height-300">
+            <div *ngFor="let message of messages.reverse(); let i = index" class="message" [ngClass]="{'dark-orange-message': i === 0, 'orange-message': i !== 0}">{{ message }}</div>
+          </div>
+        </div>
+        <div>
+          <!-- customize graph -->
+          <div>
+            <!-- update num vertices -->
+            <div class="row">
+              <div *ngIf="!solving" class="col-6 text-left">
+                <button class="btn btn-danger" [disabled]="numVertices <= 3" (click)="decrementVertices()">-</button>
+                V = {{ numVertices }}
+                <button class="btn btn-success" [disabled]="numVertices >= 8" (click)="incrementVertices()">+</button>
+              </div>
+              <div class="col-6 text-right">
+                <button *ngIf="selectingSubs && !solving" (click)="editGraph()" class="btn btn-warning">Edit Graph</button>
+                <button *ngIf="!selectingSubs" (click)="selectSubVertices()" class="btn btn-success">Select SubVertices</button>
+              </div>
+            </div>
+            <div class="text-left">
+              <button *ngIf="!selectingSubs" (click)="generateRandomEdges()" class="btn btn-primary">Generate Random Edges</button>
+            </div>
+            <div *ngIf="!solving && selectingSubs" class="inline-block">
+              Choose a set of vertices by clicking on them.
+              The subset of vertices will be colored red.
+            </div>
+            <div *ngIf="selectingSubs">
+              <div class="row">
+                <div class="col-9">
+                  <button (click)="slower()" class="btn btn-primary inline-block">Slower (&#xF7;2)</button>
+                  <button [disabled]="!selectingSubs" (click)="algorithm()" class="btn" [ngClass]="{'btn-success': paused, 'btn-warning': !paused}" [disabled]="finished">{{ paused ? 'Run Algorithm' : 'Pause Algorithm' }}</button>
+                  <button (click)="faster()" class="btn btn-danger inline-block">Faster (&#215;2)</button>
+                  <button *ngIf="solving && paused" (click)="reset()" class="btn btn-secondary">Reset</button>
+                </div>
+                <div class="col-3 text-right">
+                  <div class="inline-block margin-top-20">
+                    Speed: &#215;{{ speed }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div>
+            <p *ngIf="subsets.length">Subset of Vertices:</p>
+            <div *ngIf="subsets.length" class="scroll-panel">
+              <div *ngFor="let subset of subsets" class="block bg-secondary subset">
+                <div *ngFor="let v of subset; let i = index" class="inline-block">
+                  <div [style.background-color]="v.color" class="vertice inline-block">{{ v.id.key }}</div>
+                  <div *ngIf="i !== subset.length-1" class="inline-block">,</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- modals -->
+    <!-- hints -->
+    <div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="hintModalLabel">Hints</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-style">
+            <ul>
+              <li>Click on two vertices to add/remove an edge</li>
+              <li>To add a weight to an edge, click on the edge and type in a number (accepts unsigned double)</li>
+              <li>Click and move vertices around if the edge weight is hidden</li>
+              <li>Click <a>Select SubVertices</a> then click on a vertice to add/remove it from the set</li>
+              <li>Click <a>Run Algorithm</a> to see how to find the Steiner Tree</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- problem -->
+    <div class="modal fade" id="problemModal" tabindex="-1" role="dialog" aria-labelledby="problemModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="problemModalLabel">Problem</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-style">
+            <p>Given <a>a</a> graph <a>g</a> and a subset of vertices <a>s</a> in <a>g</a>, find the <a>Steiner Tree</a>.</p>
+            <p>
+              The <a>Steiner Tree</a> is a minimum weight tree that spans all of <a>s</a>.
+              The <a>Steiner Tree</a> may contain vertices that are not in <a>s</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- pseudo code -->
+    <div class="modal fade" id="pseudoModal" tabindex="-1" role="dialog" aria-labelledby="pseudoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pseudoModalLabel">Pseudo Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-style">
+            <ul>
+              <li>Let <a>G</a> be a graph and <a>T</a> be a subset of vertices from <a>G</a></li>
+              <li>Let <a>T<sup>C</sup></a></li>
+              <li>Let <a>O</a> be an empty graph</li>
+              <li>Let <a>S</a> be an array of all combinations of <a>T</a> and <a>T<sup>C</sup></a></li>
+              <li>For all <a>S</a> as <a>sub</a></li>
+              <ul>
+                <li>Let <a>N</a> be a graph that contains the minimum spanning tree of all vertices in <a>sub</a></li>
+                <li>If <a>O</a> is empty and N is connected</li>
+                <ul>
+                  <li>Make <a>O</a> be a copy of <a>N</a></li>
+                </ul>
+                <li>Else if weight of edges in <a>N</a> are less than weight of edges in <a>O</a> and N is connected</li>
+                <ul>
+                  <li>Make <a>O</a> be a copy of <a>N</a></li>
+                </ul>
+              </ul>
+              <li>If <a>O</a> is still an empty graph</li>
+              <ul>
+                <li>No Steiner Tree exists</li>
+              </ul>
+              <li>Else</li>
+              <ul>
+                <li><a>O</a> is the Steiner Tree</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- save instance -->
+    <div class="modal fade" id="saveModal" role="dialog" aria-labelledby="saveModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="saveModalLabel">Save As Text File</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-style">
+            <div>
+              <button class="btn btn-primary" (click)="saveAlgo()">Download Text File</button>
+            </div>
+            <div>
+              <div>Or copy the text below</div>
+              <textarea rows=6 cols=40 readonly>{{ graphString }}</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- upload instance -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadModalLabel">Upload Text File</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-style">
+            <div class="row">
+              <div class="col-6">
+                <div class="rules">
+                  <h5>Rules</h5>
+                  <ul>
+                    <li>NUMBERS ONLY</li>
+                    <li>No repeating edges</li>
+                    <li>Vertices are numbered from 0</li>
+                    <li>All values are separated by exactly one space</li>
+                    <li>No trailing spaces allowed</li>
+                    <li>The first line contains:</li>
+                    <ul>
+                      <li>First value is the number of vertices in the graph denoted by <a>v</a></li>
+                      <li>The remainder of the numbers are the terminal vertices</li>
+                      <li>Make sure every terminal vertice falls inside the range [0, <a>v</a>]</li>
+                    </ul>
+                    <li>Every following line is in the following format: <a>s t w</a></li>
+                    <ul>
+                      <li>s &mdash; edge source (vertice number)</li>
+                      <li>t &mdash; edge target (vertice number)</li>
+                      <li>w &mdash; weight of edge in the range [-500, 500]</li>
+                      <li>Negatives and decimals are accepted for weight</li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  Paste the graph instance text here
+                  <textarea [(ngModel)]="uploadText" rows=6 cols=40 placeholder="5 1 2 0&#10;0 1 5&#10;1 2 -1&#10;0 2 50&#10;4 1 -6&#10;3 4 431&#10;3 2 -98"></textarea>
+                </div>
+  
+                <div>Or upload a text file</div>
+                <label class="btn btn-primary">
+                  Upload File
+                  <input type='file' accept=".txt" (change)="readFile($event)" hidden>
+                </label>
+                <div *ngIf="uploadError" class="text-danger">Error in input</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button (click)="uploadAlgo()">Load</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</main>
+
+<footer>
+  <div class="footer row">
+      <div class="col-4 text-left">Armine Khachatryan</div>
+      <div class="col-4 text-center">Committee Chair: John Noga</div>
+      <div class="col-4 text-right">California State University, Northridge</div>
+  </div>
+</footer>

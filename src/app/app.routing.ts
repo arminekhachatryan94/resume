@@ -7,6 +7,7 @@ import { ErrorComponent } from "./views/error/error.component";
 import { HomeComponent } from './views/thesis/home/home.component';
 import { CountingInversionsComponent } from './views/thesis/counting-inversions/counting-inversions.component';
 import { KruskalComponent } from './views/thesis/kruskal/kruskal.component';
+import { SteinerComponent } from './views/thesis/steiner/steiner.component';
 
 const routes: Routes = [
     { path: '', component: PortfolioComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
         children: [
             { path: '', component: HomeComponent },
             { path: 'counting-inversions', component: CountingInversionsComponent },
-            { path: 'kruskal', component: KruskalComponent }
+            { path: 'kruskal', component: KruskalComponent },
+            { path: 'steiner', component: SteinerComponent }
         ]
     },
 

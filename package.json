@@ -26,6 +26,7 @@
     "d3": "^5.15.0",
     "d3-hierarchy": "^1.1.9",
     "file-saver": "^2.0.2",
+    "js-combinatorics": "^0.5.5",
     "mdbootstrap": "^4.5.15",
     "ng-simple-slideshow": "^1.2.6",
     "rxjs": "^6.0.0",

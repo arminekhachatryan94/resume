@@ -22,6 +22,7 @@ import { D3Service } from './services/d3.service';
 import { FileService } from './services/file.service';
 import { CountingInversionsComponent } from './views/thesis/counting-inversions/counting-inversions.component';
 import { KruskalComponent } from './views/thesis/kruskal/kruskal.component';
+import { SteinerComponent } from './views/thesis/steiner/steiner.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { KruskalComponent } from './views/thesis/kruskal/kruskal.component';
     HomeComponent,
     ThesisNavComponent,
     CountingInversionsComponent,
-    KruskalComponent
+    KruskalComponent,
+    SteinerComponent
   ],
   imports: [
     BrowserModule,
