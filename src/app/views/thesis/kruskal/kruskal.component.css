@@ -1,0 +1,80 @@
+#cy {
+    width: 50%;
+    height: 400px;
+    display: inline-block;
+  }
+  
+  #mst {
+    width: 50%;
+    height: 400px;
+    display: inline-block;
+  }
+  
+  .display-inline {
+    display: inline;
+  }
+  
+  .current-edge {
+    background-color: rgb(255, 223, 80);
+    border: 1px solid rgb(211, 193, 36);
+    display: inline-block;
+    padding: 2px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .queue .queue-element {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: coral;
+    border: 1px solid rgb(211, 83, 36);
+    display: inline-block;
+    padding: 2px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .btn-warning {
+    background-color: rgb(255, 186, 57);
+    border: 1.5px solid orange;
+    color: white;
+  }
+  .btn-warning:hover {
+    background-color: rgb(255, 179, 38);
+  }
+  
+  .margin-lr-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .menu .btn {
+    margin-right: 5px;
+  }
+  
+  .modal-dialog {
+    max-width: 800px;
+  }
+  
+  .rules {
+    border: gray solid 1px;
+    background-color: rgb(226, 226, 226);
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .modal-style {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .modal-style a {
+    color: DarkCyan;
+    font-weight: bold;
+  }

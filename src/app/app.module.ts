@@ -21,6 +21,7 @@ import { CytoService } from './services/cyto.service';
 import { D3Service } from './services/d3.service';
 import { FileService } from './services/file.service';
 import { CountingInversionsComponent } from './views/thesis/counting-inversions/counting-inversions.component';
+import { KruskalComponent } from './views/thesis/kruskal/kruskal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CountingInversionsComponent } from './views/thesis/counting-inversions/
     ErrorComponent,
     HomeComponent,
     ThesisNavComponent,
-    CountingInversionsComponent
+    CountingInversionsComponent,
+    KruskalComponent
   ],
   imports: [
     BrowserModule,
