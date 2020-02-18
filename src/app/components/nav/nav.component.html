@@ -20,8 +20,16 @@
     <li id="portfolio" class="nav-item padding" [ngClass]="{'light-blue': setTabStyle('portfolio')}">
       <div [routerLink]="['']" class="nav-link" (click)="onClick('Portfolio')" (mouseover)="onMouseOver('portfolio')" (mouseleave)="onMouseLeave('portfolio')">Portfolio</div>
     </li>
-    <li id="thesis" class="nav-item padding">
-      <div [routerLink]="['thesis']" class="nav-link" (mouseover)="onMouseOver('thesis')" (click)="onClick('thesis')" (mouseleave)="onMouseLeave('thesis')">Thesis</div>
+    <li id="thesis" class="nav-item dropdown padding">
+      <a class="nav-link dropdown-toggle" href="#" id="thesisDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Thesis
+      </a>
+      <div class="dropdown-menu" aria-labelledby="thesisDropdown">
+        <a class="dropdown-item nav-link" [routerLink]="['/thesis']">Home</a>
+        <a class="dropdown-item nav-link" [routerLink]="['/thesis/counting-inversions']">Counting Inversions</a>
+        <a class="dropdown-item nav-link" [routerLink]="['/thesis/kruskal']">Kruskal's MST</a>
+        <a class="dropdown-item nav-link" [routerLink]="['/thesis/steiner']">Steiner Tree</a>
+      </div>
     </li>
     <li id="blog" class="nav-item padding" [ngClass]="{'light-blue': setTabStyle('blog')}">
       <div [routerLink]="['blog']" class="nav-link" (mouseover)="onMouseOver('blog')" (click)="onClick('Blog')" (mouseleave)="onMouseLeave('blog')">Blog</div>
