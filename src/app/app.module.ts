@@ -16,7 +16,6 @@ import { DrawingsComponent } from './views/drawings/drawings.component';
 import { routingModule } from './app.routing';
 import { ErrorComponent } from './views/error/error.component';
 import { HomeComponent } from './views/thesis/home/home.component';
-import { ThesisNavComponent } from './components/thesis-nav/thesis-nav.component';
 import { CytoService } from './services/cyto.service';
 import { D3Service } from './services/d3.service';
 import { FileService } from './services/file.service';
@@ -34,7 +33,6 @@ import { SteinerComponent } from './views/thesis/steiner/steiner.component';
     DrawingsComponent,
     ErrorComponent,
     HomeComponent,
-    ThesisNavComponent,
     CountingInversionsComponent,
     KruskalComponent,
     SteinerComponent
