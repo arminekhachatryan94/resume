@@ -3,7 +3,7 @@ import {
   OnInit
 } from '@angular/core';
 
-import { Node } from 'src/app/models/Node.model';
+import { Node } from 'src/app/models/node.model';
 import { D3Service } from 'src/app/services/d3.service';
 import { Element } from 'src/app/models/element.model';
 import { Arr } from 'src/app/models/arr.model';

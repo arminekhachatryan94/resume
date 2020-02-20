@@ -8,7 +8,7 @@ import {
 } from 'd3-hierarchy';
 
 import { Injectable } from '@angular/core';
-import { Node } from '../models/Node.model';
+import { Node } from '../models/node.model';
 import * as d3 from 'd3';
 
 @Injectable()
