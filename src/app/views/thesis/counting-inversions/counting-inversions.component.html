@@ -73,7 +73,7 @@
       </div>
       <div *ngIf="messages.length" class="col-12 text-left">
         <div class="text-right message-scroll-panel">
-          <div *ngFor="let message of messages.reverse(); let i = index">
+          <div *ngFor="let message of messages; let i = index">
             <div class="message" [ngClass]="{'dark-orange-message': i === 0, 'orange-message': i !== 0}">{{ message }}</div>
           </div>
         </div>

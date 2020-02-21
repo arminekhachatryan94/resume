@@ -269,31 +269,31 @@ export class CountingInversionsComponent implements OnInit {
       let rightInversions = rightNode.inversions;
       this.inversions = leftInversions;
       let message = 'Left array inversions ' + leftInversions;
-      this.messages.push(message);
+      this.messages.unshift(message);
       await this.sleepWhilePaused();
       if(!this.solving) {
         return;
       }
       this.inversions += ' + ';
       message += ' + ';
-      this.messages.push(message);
+      this.messages.unshift(message);
       await this.sleepWhilePaused();
       if(!this.solving) {
         return;
       }
       this.inversions += rightInversions;
       message += ' right array inversions ' + rightInversions;
-      this.messages.push(message);
+      this.messages.unshift(message);
       await this.sleepWhilePaused();
       if(!this.solving) {
         return;
       }
       this.inversions = parseInt(leftInversions) + parseInt(rightInversions) + '';
       message += ' = ' + this.inversions;
-      this.messages.push(message);
+      this.messages.unshift(message);
     } else {
       let message = 'Inversions is 0.';
-      this.messages.push(message);
+      this.messages.unshift(message);
       this.inversions = '0';
     }
   
@@ -311,28 +311,28 @@ export class CountingInversionsComponent implements OnInit {
           node = await leftNode.value[leftI];
           leftI++;
           let message = 'First value of left array > first value of the right array, so bring down the first value of the left array.';
-          this.messages.push(message);
+          this.messages.unshift(message);
         } else {
           node = await rightNode.value[rightI];
           tempInversions = leftNode.value.length - leftI;
           totalInversions = tempInversions + parseInt(this.inversions);
           rightI++;
           let message = 'First value of right array > first value of left array, so bring down the first value of the right array.';
-          this.messages.push(message);
+          this.messages.unshift(message);
         }
       } else {
         if (parseFloat(leftNode.value[leftI].value) > parseFloat(rightNode.value[rightI].value)) {
           node = await leftNode.value[leftI];
           leftI++;
           let message = 'First value of left array > first value of the right array, so bring down the first value of the left array.';
-          this.messages.push(message);
+          this.messages.unshift(message);
         } else {
           node = await rightNode.value[rightI];
           tempInversions = leftNode.value.length - leftI;
           totalInversions = tempInversions + parseInt(this.inversions);
           rightI++;
           let message = 'First value of right array > first value of the left array, so bring down the first value of the right array.';
-          this.messages.push(message);
+          this.messages.unshift(message);
         }
       }
       node.changeVisibility(false);
@@ -350,7 +350,7 @@ export class CountingInversionsComponent implements OnInit {
           return;
         }
         let message = 'Add size of left array to number of inversions.';
-        this.messages.push(message);
+        this.messages.unshift(message);
         this.inversions += ' + ';
         await this.sleepWhilePaused();
         if(!this.solving) {
@@ -370,7 +370,7 @@ export class CountingInversionsComponent implements OnInit {
     }
     while(leftI < leftNode.value.length) {
       let message = 'There are no more elements in the right array, so bring down the remaining values of the left array.';
-      this.messages.push(message);
+      this.messages.unshift(message);
       await this.sleepWhilePaused();
       if(!this.solving) {
         return;
@@ -390,7 +390,7 @@ export class CountingInversionsComponent implements OnInit {
     }
     while(rightI < rightNode.value.length) {
       let message = 'There are no more elements in the left array, so bring down the remaining values of the right array.';
-      this.messages.push(message);
+      this.messages.unshift(message);
       await this.sleepWhilePaused();
       if(!this.solving) {
         return;
@@ -493,7 +493,7 @@ export class CountingInversionsComponent implements OnInit {
   async algorithm() {
     this.messages = [];
     if(this.isArraySorted()) {
-      this.messages.push('Array is already sorted');
+      this.messages.unshift('Array is already sorted');
       return;
     }
     this.solving = true;
@@ -532,7 +532,7 @@ export class CountingInversionsComponent implements OnInit {
         }).join(', ') + '] and [' + subRight.map(function(el) {
           return el.value;
         }).join(', ') + '].';
-        this.messages.push(message);
+        this.messages.unshift(message);
 
         let leftNode = new Node(
           this.num_nodes,
@@ -618,7 +618,7 @@ export class CountingInversionsComponent implements OnInit {
         }).join(', ') + '], so you have [' + merged.map(function(el) {
           return el.value;
         }) + '].';
-        this.messages.push(message);
+        this.messages.unshift(message);
 
         tree.value = merged;
         tree.setInversions(this.inversions);

@@ -277,7 +277,7 @@ export class SteinerComponent implements OnInit {
       await this.optimalService.refresh();
 
       await this.setSubsets();
-      this.messages.push('Get combination of all required vertices and optional vertices.');
+      this.messages.unshift('Get combination of all required vertices and optional vertices.');
       this.smallestSubset = this.subsets[0];
       this.biggestSubset = this.subsets[this.subsets.length-1];
 
@@ -304,9 +304,9 @@ export class SteinerComponent implements OnInit {
         await this.currentService.refresh();
 
         if(i === 0) {
-          this.messages.push('Get spanning tree for first subset.');
+          this.messages.unshift('Get spanning tree for first subset.');
         } else {
-          this.messages.push('Use spanning tree for next subset.');
+          this.messages.unshift('Use spanning tree for next subset.');
         }
         this.subsets.shift();
         this.weightSum = await this.currentService.getSumOfEdgeWeights();
@@ -323,9 +323,9 @@ export class SteinerComponent implements OnInit {
         await this.currentService.checkVerticesConnected(this.currentSubset)
       ) {
         if(this.optimalWeightSum === null) {
-          this.messages.push('Update optimal tree because optimal tree is blank.');
+          this.messages.unshift('Update optimal tree because optimal tree is blank.');
         } else {
-          this.messages.push('Update optimal tree because current tree is connected and weight of current tree < weight of optimal tree.');
+          this.messages.unshift('Update optimal tree because current tree is connected and weight of current tree < weight of optimal tree.');
         }
         await this.optimalService.reset();
         await this.updateVerticeColorsInGraph(
@@ -343,9 +343,9 @@ export class SteinerComponent implements OnInit {
         this.optimalWeightSum = this.weightSum;
       } else {
         if(!(await this.currentService.checkVerticesConnected(this.currentSubset))) {
-          this.messages.push('Do not update optimal tree because current tree is disconnected.');
+          this.messages.unshift('Do not update optimal tree because current tree is disconnected.');
         } else {
-          this.messages.push('Do not update optimal tree because weight of current tree > weight of optimal tree.')
+          this.messages.unshift('Do not update optimal tree because weight of current tree > weight of optimal tree.')
         }
       }
       this.currentSubset = null;
@@ -354,7 +354,7 @@ export class SteinerComponent implements OnInit {
       await this.currentService.sleep(this.sleepTime);
     }
     if(this.optimalWeightSum === null) {
-      this.messages.push('This graph has no Steiner Tree');
+      this.messages.unshift('This graph has no Steiner Tree');
     }
     this.paused = true;
     this.finished = true;
